@@ -65,7 +65,10 @@ const App = () => {
       </section>
 
       <section>
-        
+        <div>
+          <h1>Personal projects</h1>
+        </div>
+        <div></div>
       </section>
     </div>
   );
