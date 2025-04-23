@@ -59,7 +59,7 @@ const App = () => {
         </header>
 
         {/* hero section */}
-        <section id="hero" className="border py-10 md:py-20">
+        <section id="hero" className=" py-10 md:py-12">
           <div className="max-w-7xl ">
             <div className="flex flex-col md:flex-row items-center gap-8 lg:gap-12">
               {/* image */}
@@ -67,27 +67,33 @@ const App = () => {
                 <img
                   src="/src/assets/_A647239_resized.jpg"
                   alt="Marc's profile"
-                  className="rounded-lg shadow-xl w-full max-w-xs sm:max-w-sm md:w-80 lg:w-96 h-96 object-cover"
+                  className="rounded-lg shadow-xl w-full max-w-xs sm:max-w-sm md:max-w-md md:pl-10 lg:max-w-lg xl:max-w-xl h-auto object-cover"
+                  style={{
+                    maxHeight: "calc(100vh - 200px)", // Adjust 200px based on your header height
+                    height: "auto",
+                  }}
                   loading="lazy"
                 />
               </div>
 
               {/* Text content */}
 
-              <div className="md:flex-1 text-center md:text-left">
-                <p className="text-lg sm:text-xl md:text-2xl">
+              <div className="md:flex-1 ml-1 text-center md:text-left">
+                <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl">
                   <span className="text-pink-500">&lt;span&gt;</span>
                   Hey, I'm Marc
                   <span className="text-pink-500">&lt;/span&gt;</span>
                 </p>
 
+                {/* Heading */}
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-mono font-semibold mt-2">
                   <span className="text-green-400">{`{Full Stack}`}</span>
                   <br className="hidden sm:block" />
                   Web Developer<span className="text-cyan-500">_</span>
                 </h1>
 
-                <p className="mt-4 text-base sm:text-lg text-gray-400">
+                {/* paragraphs */}
+                <p className="mt-4 text-base sm:text-lg md:text-2xl lg:text-3xl text-gray-400">
                   <span className="text-pink-500">&lt;p&gt;</span> With
                   expertise in cutting-edge technologies such as{" "}
                   <span className="text-green-400">NodeJS</span>,{" "}
