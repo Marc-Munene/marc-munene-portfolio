@@ -59,8 +59,8 @@ const App = () => {
               <div className="md:flex-shrink-0 ">
                 <img
                   src="/marc-logo.jpg"
-                  alt="Marc's profile"
-                  className="rounded-lg shadow-xl w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg  h-auto object-cover ml-5 "
+                  alt="Marc's logo"
+                  className="rounded-lg shadow-xl w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-auto object-cover  "
                   style={{
                     maxHeight: "calc(100vh - 200px)", // Adjust based on your header height
                   }}
