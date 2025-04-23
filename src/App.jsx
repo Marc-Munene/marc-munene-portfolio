@@ -4,9 +4,9 @@ const App = () => {
   return (
     <div className="min-h-screen">
       <div>
-        <header className="sticky top-0 z-50 shadow-lg py-2 md:py-4">
+        <header className="sticky top-0 z-50 shadow-lg py-2 md:py-4 ">
           {/* navbar */}
-          <nav className="bg-gray-100 py-2 flex flex-row items-center justify-between mx-10 sm:mx-6 lg:mx-8 rounded-4xl backdrop-blur-lg">
+          <nav className=" py-2 flex flex-row items-center justify-between mx-10 sm:mx-6 lg:mx-8 rounded-4xl backdrop-blur-xl">
             {/* logo */}
             <div className="flex-shrink-0">
               <a href="/">
@@ -53,7 +53,7 @@ const App = () => {
 
         {/* hero section */}
         <section id="hero" className=" py-10 md:py-12">
-          <div className="mx-auto max-w-7xl">
+          <div className="mx-auto max-w-6xl">
             <div className="flex py-4 px-6 flex-col md:flex-row items-center gap-8 lg:gap-12 shadow-2xl">
               {/* image */}
               <div className="md:flex-shrink-0 ">
@@ -108,38 +108,40 @@ const App = () => {
           </div>
         </section>
 
-        <section id="about" className=" py-10 md:py-12">
-          <div className="mx-auto max-w-7xl">
-            {/* section title */}
-            <div>
-              <h1 className="border-transparent w-[8%] flex items-center justify-center py-1 px-2 rounded-md bg-gray-200 ">
-                About Me
-              </h1>
-            </div>
-
-            {/* content container */}
-            <div className="flex flex-col md:flex-row items-center gap-5 lg:gap-10 ">
-              {/* Text Content */}
-              <div className="md:flex-1 text-center md:text-left">
-                <p className="text-lg sm:text-xl md:text-2xl font-bold mb-4">
-                  Crafting clean code & building seamless experiences.
-                </p>
-                <p className=" text-base sm:text-lg leading-relaxed">
-                  Full-stack developer by day, debugger by night, and caffeine
-                  enthusiast 24/7. I build things that work (most of the time)
-                  and laugh at my own bugs (after fixing them). Let us create
-                  something awesome—preferably with fewer merge conflicts.
-                </p>
+        <section id="about" className=" py-8 md:py-12">
+          <div className="mx-auto max-w-6xl">
+            <div className="py-4 px-6 flex-col md:flex-row items-center gap-8 lg:gap-12 ">
+              {/* section title */}
+              <div className="flex justify-center sm:justify-center md:justify-start lg:justify-start items-center">
+                <h1 className="border-transparent py-1 px-2 rounded-md bg-gray-200 text-sm sm:text-base md:text-lg lg:text-xl w-auto sm:w-[8%] min-w-max">
+                  About Me
+                </h1>
               </div>
 
-              {/* Image */}
-              <div className="md:flex-shrink-0">
-                <img
-                  src="/coding.png"
-                  alt="Coding workspace"
-                  className="rounded-lg shadow-xl w-full max-w-xs sm:max-w-sm md:w-80 lg:w-96 h-auto object-cover border-4 border-none"
-                  loading="lazy"
-                />
+              {/* content container */}
+              <div className="flex flex-col md:flex-row items-center gap-5 lg:gap-10 ">
+                {/* Text Content */}
+                <div className="md:flex-1 text-center md:text-left">
+                  <p className="text-lg sm:text-xl md:text-2xl font-bold mb-4">
+                    Crafting clean code & building seamless experiences.
+                  </p>
+                  <p className=" text-base sm:text-lg leading-relaxed">
+                    Full-stack developer by day, debugger by night, and caffeine
+                    enthusiast 24/7. I build things that work (most of the time)
+                    and laugh at my own bugs (after fixing them). Let us create
+                    something awesome—preferably with fewer merge conflicts.
+                  </p>
+                </div>
+
+                {/* Image */}
+                <div className="md:flex-shrink-0">
+                  <img
+                    src="/coding.png"
+                    alt="Coding workspace"
+                    className="rounded-lg shadow-xl w-full max-w-xs sm:max-w-sm md:w-80 lg:w-96 h-auto object-cover border-4 border-none"
+                    loading="lazy"
+                  />
+                </div>
               </div>
             </div>
           </div>
