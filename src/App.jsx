@@ -13,10 +13,10 @@ const App = () => {
       <div>
         <header className="sticky top-0 z-50 shadow-xl py-2 md:py-4">
           {/* navbar */}
-          <nav className="bg-gray-200 flex flex-row items-center justify-between mx-10 sm:mx-6 lg:mx-8 rounded-4xl backdrop-blur-lg">
+          <nav className="bg-gray-200 py-1 flex flex-row items-center justify-between mx-10 sm:mx-6 lg:mx-8 rounded-4xl backdrop-blur-lg">
             {/* logo */}
-            <div>
-              <a href="/" className="flex-shrink-0">
+            <div className="flex-shrink-0">
+              <a href="/">
                 <img
                   src="/munene.dev2.png"
                   alt="logo"
@@ -63,11 +63,11 @@ const App = () => {
           <div className="mx-auto max-w-7xl ">
             <div className="flex flex-col md:flex-row items-center gap-8 lg:gap-12 shadow-2xl">
               {/* image */}
-              <div className="md:flex-shrink-0 py-7">
+              <div className="md:flex-shrink-0 py-6">
                 <img
-                  src="/src/assets/_A647239_resized.jpg"
+                  src="/_A647239_resized.jpg"
                   alt="Marc's profile"
-                  className="rounded-lg shadow-xl w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl h-auto object-cover ml-5 "
+                  className="rounded-lg shadow-xl w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg  h-auto object-cover ml-5 "
                   style={{
                     maxHeight: "calc(100vh - 200px)", // Adjust based on your header height
                   }}
@@ -105,7 +105,7 @@ const App = () => {
                   <span className="text-pink-500">&lt;/p&gt;</span>
                 </p>
 
-                <div className="mt-6">
+                <div className="mt-6 mb-6">
                   <button className="border border-cyan-500 text-cyan-500 hover:bg-cyan-500/10 px-4 py-2 sm:px-6 sm:py-3 rounded-lg cursor-pointer transition-all duration-300">
                     Contact Me?
                   </button>
