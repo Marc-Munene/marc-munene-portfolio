@@ -1,24 +1,44 @@
 import { LuInstagram } from "react-icons/lu";
 import { FaGithub } from "react-icons/fa";
+import { BsInstagram } from "react-icons/bs";
 const App = () => {
   return (
-    <div>
-      <header>
-        <nav>
+    <div className="min-h-screen">
+      <header className="sticky top-0 z-50 shadow-lg bg-bckg py-4">
+        {/* navbar */}
+        <nav className="flex flex-row items-center justify-between mx-6 rounded-4xl backdrop-blur-lg">
+          {/* logo */}
           <div>
-            <img src="/public/munene.dev2.png" alt="logo" />
+            <a href="/">
+              <img
+                src="/munene.dev2.png"
+                alt="logo"
+                className="h-auto w-[30%] rounded"
+              />
+            </a>
           </div>
-          <ul>
-            <li>About</li>
-            <li>Projects</li>
-            <li>Experience</li>
-          </ul>
-          <div>
-            <LuInstagram />
-            <FaGithub />
+
+          {/* navigation links */}
+          <div className="md:flex-row flex-grow justify-center">
+            <ul className="flex space-x-8 sm:text-sm md:text-2xl lg:text-3xl">
+              <li className="  font-base cursor-pointer ">
+                <a href="#about">About</a>
+              </li>
+              <li className="  font-base cursor-pointer ">
+                <a href="#projects">Projects</a>
+              </li>
+              <li className="  font-base cursor-pointer ">Profession</li>
+            </ul>
+          </div>
+          <div className="flex space-x-4">
+            <a href="https://github.com/Marc-Munene" target="blank">
+              <FaGithub size={24} className="cursor-pointer" />
+            </a>
+            <a href="https://www.instagram.com/its__munene/" target="blank">
+              <BsInstagram size={24} className="cursor-pointer mr-3" />
+            </a>
           </div>
         </nav>
-        About Projects
       </header>
 
       <section id="hero">
