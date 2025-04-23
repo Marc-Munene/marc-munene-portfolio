@@ -24,9 +24,6 @@ const App = () => {
       <section id="hero">
         <div>
           <div>
-            <img src="/src/assets/comp.jpg" alt="Computer" />
-          </div>
-          <div>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               Doloribus quae minus autem vitae, cum maiores, iusto numquam
@@ -38,7 +35,37 @@ const App = () => {
               temporibus!
             </p>
           </div>
+          <div>
+            <img src="/src/assets/comp.jpg" alt="Computer" />
+          </div>
         </div>
+      </section>
+
+      <section id="about">
+        <div>
+          <h1>About Me</h1>
+        </div>
+        <div>
+          <div>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum,
+              beatae. Ratione, quasi at dolores sequi, rem reprehenderit sunt,
+              maiores beatae quia accusamus molestias vero deserunt architecto!
+              Nostrum inventore debitis officia!
+            </p>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum,
+              beatae. Ratione, quasi at dolores sequi, rem reprehenderit sunt,
+              maiores beatae quia accusamus molestias vero deserunt architecto!
+              Nostrum inventore debitis officia!
+            </p>
+          </div>
+          <div>skills goes here</div>
+        </div>
+      </section>
+
+      <section>
+        
       </section>
     </div>
   );
