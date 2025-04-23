@@ -60,10 +60,10 @@ const App = () => {
 
         {/* hero section */}
         <section id="hero" className=" py-10 md:py-12">
-          <div className="mx-auto max-w-7xl ">
-            <div className="flex flex-col md:flex-row items-center gap-8 lg:gap-12 shadow-2xl">
+          <div className="mx-auto max-w-7xl">
+            <div className="flex py-4 px-6 flex-col md:flex-row items-center gap-8 lg:gap-12 shadow-2xl">
               {/* image */}
-              <div className="md:flex-shrink-0 py-6">
+              <div className="md:flex-shrink-0 ">
                 <img
                   src="/_A647239_resized.jpg"
                   alt="Marc's profile"
