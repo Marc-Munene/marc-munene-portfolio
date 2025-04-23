@@ -4,7 +4,7 @@ const App = () => {
   return (
     <div className="min-h-screen">
       <div>
-        <header className="sticky top-0 z-50 shadow-lg py-2 md:py-4 ">
+        <header className="sticky top-0 z-50 shadow-lg py-2 md:py-4 mx-auto max-w-7xl rounded-full">
           {/* navbar */}
           <nav className=" py-2 flex flex-row items-center justify-between mx-10 sm:mx-6 lg:mx-8 rounded-4xl backdrop-blur-xl">
             {/* logo */}
