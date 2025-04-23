@@ -1,41 +1,57 @@
 import { LuInstagram } from "react-icons/lu";
 import { FaGithub } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
+import { useState } from "react";
 const App = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   return (
     <div className="min-h-screen">
-      <header className="sticky top-0 z-50 shadow-lg bg-bckg py-4">
+      <header className="sticky top-0 z-50 shadow-xl py-2 md:py-4">
         {/* navbar */}
-        <nav className="flex flex-row items-center justify-between mx-6 rounded-4xl backdrop-blur-lg">
+        <nav className="bg-gray-200 flex flex-row items-center justify-between mx-10 sm:mx-6 lg:mx-8 rounded-4xl backdrop-blur-lg">
           {/* logo */}
           <div>
-            <a href="/">
+            <a href="/" className="flex-shrink-0">
               <img
                 src="/munene.dev2.png"
                 alt="logo"
-                className="h-auto w-[30%] rounded"
+                className="h-10 w-auto ml-3 md:h-16 lg:h-20 rounded"
               />
             </a>
           </div>
 
           {/* navigation links */}
-          <div className="md:flex-row flex-grow justify-center">
-            <ul className="flex space-x-8 sm:text-sm md:text-2xl lg:text-3xl">
-              <li className="  font-base cursor-pointer ">
+          <div className="hidden md:flex flex-grow justify-center">
+            <ul className="flex space-x-4 lg:space-x-8 text-sm sm:text-base md:text-xl lg:text-2xl">
+              <li className="font-base cursor-pointer  ">
                 <a href="#about">About</a>
               </li>
-              <li className="  font-base cursor-pointer ">
+              <li className="font-base cursor-pointer">
                 <a href="#projects">Projects</a>
               </li>
-              <li className="  font-base cursor-pointer ">Profession</li>
+              <li className="font-base cursor-pointer">Profession</li>
             </ul>
           </div>
-          <div className="flex space-x-4">
-            <a href="https://github.com/Marc-Munene" target="blank">
-              <FaGithub size={24} className="cursor-pointer" />
+
+          {/* social icons - always visible */}
+          <div className="flex space-x-3 lg:space-x-4 mr-3">
+            <a
+              href="https://github.com/Marc-Munene"
+              target="blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub className="cursor-pointer h-5 w-5 sm:h-6 sm:w-6 " />
             </a>
-            <a href="https://www.instagram.com/its__munene/" target="blank">
-              <BsInstagram size={24} className="cursor-pointer mr-3" />
+            <a
+              href="https://www.instagram.com/its__munene/"
+              target="blank"
+              rel="Instagram Icon"
+            >
+              <BsInstagram className="cursor-pointer h-5 w-5 sm:h-6 sm:w-6" />
             </a>
           </div>
         </nav>
