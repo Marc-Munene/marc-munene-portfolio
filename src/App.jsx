@@ -108,6 +108,7 @@ const App = () => {
           </div>
         </section>
 
+        {/* About section */}
         <section id="about" className=" py-8 md:py-12">
           <div className="mx-auto max-w-6xl">
             <div className="py-4 px-6 flex-col md:flex-row items-center gap-8 lg:gap-12 ">
