@@ -1,26 +1,19 @@
-import { LuInstagram } from "react-icons/lu";
 import { FaGithub } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
-import { useState } from "react";
 const App = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
   return (
     <div className="min-h-screen">
       <div>
-        <header className="sticky top-0 z-50 shadow-xl py-2 md:py-4">
+        <header className="sticky top-0 z-50 shadow-lg py-2 md:py-4">
           {/* navbar */}
-          <nav className="bg-gray-200 py-1 flex flex-row items-center justify-between mx-10 sm:mx-6 lg:mx-8 rounded-4xl backdrop-blur-lg">
+          <nav className="bg-gray-100 py-2 flex flex-row items-center justify-between mx-10 sm:mx-6 lg:mx-8 rounded-4xl backdrop-blur-lg">
             {/* logo */}
             <div className="flex-shrink-0">
               <a href="/">
                 <img
-                  src="/munene.dev2.png"
+                  src="/marc.png"
                   alt="logo"
-                  className="h-10 w-auto ml-3 md:h-16 lg:h-20 rounded"
+                  className="h-10 w-auto ml-3 md:h-13 g:h-20 rounded"
                 />
               </a>
             </div>
@@ -65,7 +58,7 @@ const App = () => {
               {/* image */}
               <div className="md:flex-shrink-0 ">
                 <img
-                  src="/_A647239_resized.jpg"
+                  src="/marc-logo.jpg"
                   alt="Marc's profile"
                   className="rounded-lg shadow-xl w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg  h-auto object-cover ml-5 "
                   style={{
@@ -80,7 +73,7 @@ const App = () => {
               <div className="md:flex-1 ml-1 text-center md:text-left">
                 <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl">
                   <span className="text-pink-500">&lt;span&gt;</span>
-                  Hey, I'm Marc
+                  Hey, I'm Marc Munene
                   <span className="text-pink-500">&lt;/span&gt;</span>
                 </p>
 
