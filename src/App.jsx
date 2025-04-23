@@ -60,17 +60,16 @@ const App = () => {
 
         {/* hero section */}
         <section id="hero" className=" py-10 md:py-12">
-          <div className="max-w-7xl ">
-            <div className="flex flex-col md:flex-row items-center gap-8 lg:gap-12">
+          <div className="mx-auto max-w-7xl ">
+            <div className="flex flex-col md:flex-row items-center gap-8 lg:gap-12 shadow-2xl">
               {/* image */}
-              <div className="md:flex-shrink-0">
+              <div className="md:flex-shrink-0 py-7">
                 <img
                   src="/src/assets/_A647239_resized.jpg"
                   alt="Marc's profile"
-                  className="rounded-lg shadow-xl w-full max-w-xs sm:max-w-sm md:max-w-md md:pl-10 lg:max-w-lg xl:max-w-xl h-auto object-cover"
+                  className="rounded-lg shadow-xl w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl h-auto object-cover ml-5 "
                   style={{
-                    maxHeight: "calc(100vh - 200px)", // Adjust 200px based on your header height
-                    height: "auto",
+                    maxHeight: "calc(100vh - 200px)", // Adjust based on your header height
                   }}
                   loading="lazy"
                 />
