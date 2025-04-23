@@ -85,7 +85,7 @@ const App = () => {
                 </h1>
 
                 {/* paragraphs */}
-                <p className="mt-4 text-base sm:text-lg md:text-2xl lg:text-3xl text-gray-400">
+                <p className="mt-4 text-base sm:text-lg md:text-2xl lg:text-3xl">
                   <span className="text-pink-500">&lt;p&gt;</span> With
                   expertise in cutting-edge technologies such as{" "}
                   <span className="text-green-400">NodeJS</span>,{" "}
@@ -108,26 +108,40 @@ const App = () => {
           </div>
         </section>
 
-        <section id="about">
-          <div>
-            <h1>About Me</h1>
-          </div>
-          <div>
+        <section id="about" className=" py-10 md:py-12">
+          <div className="mx-auto max-w-7xl">
+            {/* section title */}
             <div>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Dolorum, beatae. Ratione, quasi at dolores sequi, rem
-                reprehenderit sunt, maiores beatae quia accusamus molestias vero
-                deserunt architecto! Nostrum inventore debitis officia!
-              </p>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Dolorum, beatae. Ratione, quasi at dolores sequi, rem
-                reprehenderit sunt, maiores beatae quia accusamus molestias vero
-                deserunt architecto! Nostrum inventore debitis officia!
-              </p>
+              <h1 className="border-transparent w-[8%] flex items-center justify-center py-1 px-2 rounded-md bg-gray-200 ">
+                About Me
+              </h1>
             </div>
-            <div>skills goes here</div>
+
+            {/* content container */}
+            <div className="flex flex-col md:flex-row items-center gap-5 lg:gap-10 ">
+              {/* Text Content */}
+              <div className="md:flex-1 text-center md:text-left">
+                <p className="text-lg sm:text-xl md:text-2xl font-bold mb-4">
+                  Crafting clean code & building seamless experiences.
+                </p>
+                <p className=" text-base sm:text-lg leading-relaxed">
+                  Full-stack developer by day, debugger by night, and caffeine
+                  enthusiast 24/7. I build things that work (most of the time)
+                  and laugh at my own bugs (after fixing them). Let us create
+                  something awesome—preferably with fewer merge conflicts.
+                </p>
+              </div>
+
+              {/* Image */}
+              <div className="md:flex-shrink-0">
+                <img
+                  src="/coding.png"
+                  alt="Coding workspace"
+                  className="rounded-lg shadow-xl w-full max-w-xs sm:max-w-sm md:w-80 lg:w-96 h-auto object-cover border-4 border-none"
+                  loading="lazy"
+                />
+              </div>
+            </div>
           </div>
         </section>
 
