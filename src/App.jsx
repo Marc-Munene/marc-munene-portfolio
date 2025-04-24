@@ -1,12 +1,16 @@
+import { useEffect } from "react";
 import { FaGithub } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
+import { initScrollAnimations } from "./animations/scrollAmination";
+
 const App = () => {
+  initScrollAnimations();
+
   return (
     <div className="min-h-screen">
       <div>
         <header className="sticky top-0 z-50 shadow-lg py-2 md:py-4 mx-auto max-w-7xl rounded-full">
-          {/* navbar */}
-          <nav className=" py-2 flex flex-row items-center justify-between mx-10 sm:mx-6 lg:mx-8 rounded-4xl backdrop-blur-xl">
+          <nav className="py-2 flex flex-row items-center justify-between mx-10 sm:mx-6 lg:mx-8 rounded-4xl backdrop-blur-3xl">
             {/* logo */}
             <div className="flex-shrink-0">
               <a href="/">
@@ -18,32 +22,34 @@ const App = () => {
               </a>
             </div>
 
-            {/* navigation links */}
+            {/*Navigatioon Links  */}
             <div className="hidden md:flex flex-grow justify-center">
               <ul className="flex space-x-4 lg:space-x-8 text-sm sm:text-base md:text-xl lg:text-2xl">
-                <li className="font-base cursor-pointer  ">
+                <li>
                   <a href="#about">About</a>
                 </li>
-                <li className="font-base cursor-pointer">
+                <li>
                   <a href="#projects">Projects</a>
                 </li>
-                <li className="font-base cursor-pointer">Profession</li>
+                <li>
+                  <a href="#contact">Contact</a>
+                </li>
               </ul>
             </div>
 
-            {/* social icons - always visible */}
-            <div className="flex space-x-3 lg:space-x-4 mr-3">
+            {/* Icons */}
+            <div className="flex space-x-3 lg:space-x-4 mr-3 social-icons">
               <a
                 href="https://github.com/Marc-Munene"
-                target="blank"
+                target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaGithub className="cursor-pointer h-5 w-5 sm:h-6 sm:w-6 " />
+                <FaGithub className="cursor-pointer h-5 w-5 sm:h-6 sm:w-6" />
               </a>
               <a
                 href="https://www.instagram.com/its__munene/"
-                target="blank"
-                rel="Instagram Icon"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <BsInstagram className="cursor-pointer h-5 w-5 sm:h-6 sm:w-6" />
               </a>
@@ -51,64 +57,53 @@ const App = () => {
           </nav>
         </header>
 
-        {/* hero section */}
-        <section id="hero" className=" py-10 md:py-12">
+        {/* Hero section */}
+        <section id="hero" className="py-10 md:py-12">
           <div className="mx-auto max-w-6xl">
             <div className="flex py-4 px-6 flex-col md:flex-row items-center gap-8 lg:gap-12 shadow-2xl">
-              {/* image */}
-              <div className="md:flex-shrink-0 ">
+              <div className="md:flex-shrink-0">
                 <img
                   src="/marc-logo.jpg"
                   alt="Marc's logo"
-                  className="rounded-lg shadow-xl w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-auto object-cover  "
-                  style={{
-                    maxHeight: "calc(100vh - 200px)", // Adjust based on your header height
-                  }}
-                  loading="lazy"
+                  className="rounded-lg shadow-xl w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-auto object-cover"
+                  loading="eager"
                 />
               </div>
-
-              {/* Text content */}
-
               <div className="md:flex-1 ml-1 text-center md:text-left">
                 <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl">
                   <span className="text-pink-500">&lt;span&gt;</span>
                   Hey, I'm Marc Munene
                   <span className="text-pink-500">&lt;/span&gt;</span>
                 </p>
-
-                {/* Heading */}
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-mono font-semibold mt-2">
                   <span className="text-green-400">{`{Full Stack}`}</span>
                   <br className="hidden sm:block" />
                   Web Developer<span className="text-cyan-500">_</span>
                 </h1>
-
-                {/* paragraphs */}
                 <p className="mt-4 text-base sm:text-lg md:text-2xl lg:text-3xl">
                   <span className="text-pink-500">&lt;p&gt;</span> With
-                  expertise in cutting-edge technologies such as{" "}
-                  <span className="text-green-400">NodeJS</span>,{" "}
-                  <span className="">ExpressJS</span>,{" "}
-                  <span className="text-blue-500">React</span>,{" "}
-                  <span className="text-yellow-500">Python</span>,{" "}
-                  <span className="text-blue-600">Typescript</span>, and{" "}
-                  <span className="text-green-400">MongoDB</span>... I deliver
-                  web solutions that are both innovative and robust.{" "}
+                  expertise in <span className="text-green-400">NodeJS</span>,
+                  <span> ExpressJS</span>,{" "}
+                  <span className="text-blue-500">React</span>,
+                  <span className="text-yellow-500"> Python</span>,
+                  <span className="text-blue-600"> Typescript</span>, and
+                  <span className="text-green-400"> MongoDB</span>... I deliver
+                  innovative and robust web solutions.
                   <span className="text-pink-500">&lt;/p&gt;</span>
                 </p>
-
                 <div className="mt-6 mb-3">
-                  <button className="border border-cyan-500 text-cyan-500 hover:bg-cyan-500/10 px-4 py-2 sm:px-6 sm:py-3 rounded-lg cursor-pointer transition-all duration-300">
+                  <a
+                    href="#contact"
+                    className="border border-cyan-500 text-cyan-500 hover:bg-cyan-500/10 px-4 py-2 sm:px-6 sm:py-3 rounded-lg cursor-pointer transition-all duration-300"
+                  >
                     Contact Me?
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* About section */}
         <section id="about" className="py-8 md:py-12">
           <div className="mx-auto max-w-6xl">
             <div className="py-4 px-6 flex-col md:flex-row items-center gap-8 lg:gap-12 ">
@@ -147,12 +142,11 @@ const App = () => {
             </div>
           </div>
         </section>
-
-        <section>
-          <div>
-            <h1>Personal projects</h1>
-          </div>
-          <div></div>
+        <section id="projects" className="py-8 md:py-12">
+          ...
+        </section>
+        <section id="contact" className="py-8 md:py-12">
+          ...
         </section>
       </div>
     </div>
