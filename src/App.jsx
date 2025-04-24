@@ -1,5 +1,6 @@
 import { FaGithub } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
+import { IoIosContact } from "react-icons/io";
 // import { initScrollAnimations } from "./animations/scrollAmination";
 
 const App = () => {
@@ -8,7 +9,7 @@ const App = () => {
   return (
     <div className="min-h-screen">
       <div>
-        <header className="sticky top-0 z-50 shadow-lg py-2 md:py-4 mx-auto max-w-7xl rounded-full">
+        <header className="sticky top-0 z-50  py-2 md:py-4 mx-auto max-w-6xl ">
           <nav className="py-2 flex flex-row items-center justify-between mx-10 sm:mx-6 lg:mx-8 rounded-4xl backdrop-blur-3xl">
             {/* logo */}
             <div className="flex-shrink-0">
@@ -57,45 +58,53 @@ const App = () => {
         </header>
 
         {/* Hero section */}
-        <section id="hero" className="py-10 md:py-12">
-          <div className="mx-auto max-w-6xl">
-            <div className="flex py-4 px-6 flex-col md:flex-row items-center gap-8 lg:gap-12 shadow-2xl">
-              <div className="md:flex-shrink-0">
+        <section id="hero" className=" md:py-10">
+          <div className="mx-auto max-w-6xl py-8 px-4 sm:px-6">
+            <div className="flex flex-col md:flex-row items-center gap-6 lg:gap-8 xl:gap-10">
+              {/* Image - Optimized for laptop screens */}
+              <div className="w-full md:w-5/12 lg:w-8/12 xl:w-4/12 flex-shrink-0">
                 <img
                   src="/marc-logo.jpg"
                   alt="Marc's logo"
-                  className="rounded-lg shadow-xl w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-auto object-cover"
+                  className="rounded-lg shadow-xl w-full max-w-[280px] sm:max-w-[320px] md:max-w-[360px] lg:max-w-[400px] h-auto object-cover mx-auto md:mx-0"
                   loading="eager"
                 />
               </div>
-              <div className="md:flex-1 ml-1 text-center md:text-left">
-                <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl">
+
+              {/* Content - Adjusted for perfect laptop fit */}
+              <div className="w-full md:w-7/12 lg:w-7/12 xl:w-8/12 text-center md:text-left">
+                <p className="text-lg sm:text-xl md:text-xl lg:text-2xl xl:text-3xl mb-2 md:mb-3">
                   <span className="text-pink-500">&lt;span&gt;</span>
                   Hey, I'm Marc Munene
                   <span className="text-pink-500">&lt;/span&gt;</span>
                 </p>
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-mono font-semibold mt-2">
-                  <span className="text-green-400">{`{Full Stack}`}</span>
-                  <br className="hidden sm:block" />
-                  Web Developer<span className="text-cyan-500">_</span>
+
+                <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-mono font-semibold leading-tight">
+                  <span className="text-green-400">{`{Full Stack}`}</span>{" "}
+                  <span className="block sm:inline">Web Developer</span>
+                  <span className="text-cyan-500">_</span>
                 </h1>
-                <p className="mt-4 text-base sm:text-lg md:text-2xl lg:text-3xl">
+
+                <p className="mt-3 sm:mt-4 md:mt-4 text-base sm:text-lg md:text-lg lg:text-xl xl:text-2xl leading-relaxed">
                   <span className="text-pink-500">&lt;p&gt;</span> With
-                  expertise in <span className="text-green-400">NodeJS</span>,
-                  <span> ExpressJS</span>,{" "}
-                  <span className="text-blue-500">React</span>,
-                  <span className="text-yellow-500"> Python</span>,
-                  <span className="text-blue-600"> Typescript</span>, and
-                  <span className="text-green-400"> MongoDB</span>... I deliver
+                  expertise in <span className="text-green-400">NodeJS</span>,{" "}
+                  <span>ExpressJS</span>,{" "}
+                  <span className="text-blue-500">React</span>,{" "}
+                  <span className="text-yellow-500">Python</span>,{" "}
+                  <span className="text-blue-600">TypeScript</span>, and{" "}
+                  <span className="text-green-400">MongoDB</span>... I deliver
                   innovative and robust web solutions.
                   <span className="text-pink-500">&lt;/p&gt;</span>
                 </p>
-                <div className="mt-6 mb-3">
+
+                <div className="mt-5 sm:mt-6 md:mt-6">
                   <a
                     href="#contact"
-                    className="border border-cyan-500 text-cyan-500 hover:bg-cyan-500/10 px-4 py-2 sm:px-6 sm:py-3 rounded-lg cursor-pointer transition-all duration-300"
+                    className="inline-block border px-4 py-2 sm:px-5 sm:py-2.5 md:px-5 md:py-2.5 text-sm sm:text-base md:text-base rounded-lg transition-all duration-300 hover:shadow-md transform hover:-translate-y-0.5 hover:scale-[1.02]"
                   >
-                    Contact Me?
+                    <span className="flex items-center gap-3">
+                      <IoIosContact size={24} /> Contact
+                    </span>
                   </a>
                 </div>
               </div>
@@ -103,8 +112,9 @@ const App = () => {
           </div>
         </section>
 
-        <section id="about" className="py-8 md:py-12">
-          <div className="mx-auto max-w-6xl">
+        {/* about section */}
+        <section id="about" className="  md:py-10">
+          <div className="mx-auto max-w-6xl py-8 px-4 ">
             <div className="py-4 px-6 flex-col md:flex-row items-center gap-8 lg:gap-12 ">
               {/* section title */}
               <div className="flex justify-center sm:justify-center md:justify-start lg:justify-start items-center">
@@ -131,7 +141,7 @@ const App = () => {
                 {/* Image */}
                 <div className="md:flex-shrink-0">
                   <img
-                    src="/coding.png"
+                    src="/coding-.png"
                     alt="Coding workspace"
                     className="rounded-lg shadow-xl w-full max-w-xs sm:max-w-sm md:w-80 lg:w-96 h-auto object-cover border-4 border-none"
                     loading="lazy"
@@ -143,8 +153,8 @@ const App = () => {
         </section>
 
         {/* Projects */}
-        <section id="projects" className="py-8 md:py-12">
-          <div className="mx-auto max-w-6xl">
+        <section id="projects" className="  md:py-10">
+          <div className="mx-auto  py-8 px-4 max-w-6xl">
             <div className="py-4 px-6 flex-col md:flex-row items-center gap-8 lg:gap-12 ">
               {/* section title */}
               <div className="flex justify-center sm:justify-center md:justify-start lg:justify-start items-center mb-5">
