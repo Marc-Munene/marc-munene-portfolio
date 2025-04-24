@@ -64,10 +64,35 @@ export const initScrollAnimations = () => {
     gsap.from("#about", {
       opacity: 0,
       y: 50,
-      duration: 2,
+      duration: 1,
       ease: "power2.out",
       scrollTrigger: {
         trigger: "#about",
+        start: "top 80%",
+      },
+    });
+
+    // Add this animation alongside the other section animations in initScrollAnimations()
+    gsap.from("#projects", {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: "#projects",
+        start: "top 80%",
+      },
+    });
+
+    // Add animation for project cards
+    gsap.from("#projects .grid > div", {
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      stagger: 0.2,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: "#projects",
         start: "top 80%",
       },
     });
@@ -101,4 +126,3 @@ export const initScrollAnimations = () => {
     };
   });
 };
-

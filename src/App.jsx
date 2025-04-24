@@ -1,10 +1,9 @@
-import { useEffect } from "react";
 import { FaGithub } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
-import { initScrollAnimations } from "./animations/scrollAmination";
+// import { initScrollAnimations } from "./animations/scrollAmination";
 
 const App = () => {
-  initScrollAnimations();
+  // initScrollAnimations();
 
   return (
     <div className="min-h-screen">
@@ -147,7 +146,6 @@ const App = () => {
         <section id="projects" className="py-8 md:py-12">
           <div className="mx-auto max-w-6xl">
             <div className="py-4 px-6 flex-col md:flex-row items-center gap-8 lg:gap-12 ">
-
               {/* section title */}
               <div className="flex justify-center sm:justify-center md:justify-start lg:justify-start items-center mb-5">
                 <h1 className="border-transparent py-1 px-2 rounded-md bg-gray-200 text-sm sm:text-base md:text-lg lg:text-xl w-auto sm:w-[8%] min-w-max">
@@ -247,6 +245,16 @@ const App = () => {
                     </div>
                   </div>
                 </div>
+              </div>
+              <div className="mt-5  flex justify-center ">
+                <a href="https://github.com/Marc-Munene">
+                  <button className="flex items-center border py-2 px-3 shadow-xl rounded-md cursor-pointer hover:bg-gray-100 transition-all duration-300 hover:shadow-md transform hover:-translate-y-0.5 hover:scale-[1.02] ">
+                    <span>
+                      <FaGithub size={24} className="mr-2" />
+                    </span>
+                    More on GitHub
+                  </button>
+                </a>
               </div>
             </div>
           </div>
