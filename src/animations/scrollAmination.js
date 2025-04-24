@@ -64,7 +64,7 @@ export const initScrollAnimations = () => {
     gsap.from("#about", {
       opacity: 0,
       y: 50,
-      duration: 1,
+      duration: 2,
       ease: "power2.out",
       scrollTrigger: {
         trigger: "#about",
