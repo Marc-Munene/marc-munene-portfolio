@@ -543,7 +543,7 @@ const App = () => {
                 {/* Contact Form Button */}
                 <div className="pt-4">
                   <a
-                    href="mailto:marcmunene.dev@gmail.com"
+                    href="mailto:marcmunene104@gmail.com"
                     className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-cyan-500 hover:bg-cyan-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 transition-colors"
                   >
                     <IoIosContact className="mr-2" size={18} />
