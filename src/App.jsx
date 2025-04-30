@@ -272,13 +272,12 @@ const App = () => {
                       CEMA Health Program
                     </h3>
                     <p className=" text-sm md:text-base mb-4">
-                      A health program designed to add health programs by doctors, register patients and enroll them in different programs.
+                      A health program designed to add health programs by
+                      doctors, register patients and enroll them in different
+                      programs.
                     </p>
                     <div className="flex justify-end">
-                      <a
-                        href="https://hangover-football-club.vercel.app/"
-                        target="blank"
-                      >
+                      <a href="https://cema-health.vercel.app/" target="blank">
                         <button className="bg-cyan-500 hover:bg-cyan-600 dark:bg-cyan-600 dark:hover:bg-cyan-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-0.5 cursor-pointer">
                           View Demo
                         </button>
