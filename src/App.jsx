@@ -58,7 +58,7 @@ const App = () => {
         </header>
 
         {/* Hero section */}
-        <section id="hero" className=" md:py-10">
+        <section id="hero" className="  md:py-8">
           <div className="mx-auto max-w-6xl py-8 px-4 sm:px-6">
             <div className="flex flex-col md:flex-row items-center gap-6 lg:gap-8 xl:gap-10">
               {/* Image - Optimized for laptop screens */}
@@ -87,20 +87,24 @@ const App = () => {
 
                 <p className="mt-3 sm:mt-4 md:mt-4 text-base sm:text-lg md:text-lg lg:text-xl xl:text-2xl leading-relaxed">
                   <span className="text-pink-500">&lt;p&gt;</span> With
-                  expertise in <span className="text-green-400">NodeJS</span>,{" "}
-                  <span>ExpressJS</span>,{" "}
+                  expertise in developing software with the{" "}
+                  <span>MERN Stack -</span>{" "}
+                  <span className="text-green-800">MongoDB</span>,{" "}
+                  <span> Express.js</span>,{" "}
                   <span className="text-blue-500">React</span>,{" "}
+                  <span className="text-green-400">Node.js</span>.{" "}
+                  <span>Additionally, selft taught</span>{" "}
                   <span className="text-yellow-500">Python</span>,{" "}
                   <span className="text-blue-600">TypeScript</span>, and{" "}
-                  <span className="text-green-400">MongoDB</span>... I deliver
-                  innovative and robust web solutions.
+                  <span>Next.js</span>... I deliver innovative and robust web
+                  solutions.
                   <span className="text-pink-500">&lt;/p&gt;</span>
                 </p>
 
                 <div className="mt-5 sm:mt-6 md:mt-6">
                   <a
                     href="#contact"
-                    className="inline-block border px-4 py-2 sm:px-5 sm:py-2.5 md:px-5 md:py-2.5 text-sm sm:text-base md:text-base rounded-lg transition-all duration-300 hover:shadow-md transform hover:-translate-y-0.5 hover:scale-[1.02]"
+                    className="inline-block border  hover:bg-gray-100  px-4 py-2 sm:px-5 sm:py-2.5 md:px-5 md:py-2.5 text-sm sm:text-base md:text-base rounded-lg transition-all duration-300 hover:shadow-md transform hover:-translate-y-0.5 hover:scale-[1.02]"
                   >
                     <span className="flex items-center gap-3">
                       <IoIosContact size={24} /> Contact
@@ -174,7 +178,7 @@ const App = () => {
                     />
                   </div>
                   <div className="p-5">
-                    <h3 className="text-lg md:text-xl font-semibold text-gray-800 dark:text-white mb-2">
+                    <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">
                       Classify
                     </h3>
                     <p className="0 text-sm md:text-base mb-4">
@@ -204,7 +208,7 @@ const App = () => {
                     />
                   </div>
                   <div className="p-5">
-                    <h3 className="text-lg md:text-xl font-semibold text-gray-800 dark:text-white mb-2">
+                    <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">
                       Kladi Outfits
                     </h3>
                     <p className=" text-sm md:text-base mb-4">
@@ -236,12 +240,39 @@ const App = () => {
                     />
                   </div>
                   <div className="p-5">
-                    <h3 className="text-lg md:text-xl font-semibold text-gray-800 dark:text-white mb-2">
+                    <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">
                       Hangover Football Academy
                     </h3>
                     <p className=" text-sm md:text-base mb-4">
                       A football club website, entailing every detail of the
                       club, from the partnersgym, field and partners.
+                    </p>
+                    <div className="flex justify-end">
+                      <a
+                        href="https://hangover-football-club.vercel.app/"
+                        target="blank"
+                      >
+                        <button className="bg-cyan-500 hover:bg-cyan-600 dark:bg-cyan-600 dark:hover:bg-cyan-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-0.5 cursor-pointer">
+                          View Demo
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className=" rounded-xl shadow-md overflow-hidden transition-transform hover:scale-[1.02] hover:shadow-lg">
+                  <div className="relative">
+                    <img
+                      className="w-full h-48 md:h-56 object-cover"
+                      src="/cema.png"
+                      alt="Hangover football website"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-lg md:text-xl font-semibold text-gray-800  mb-2">
+                      CEMA Health Program
+                    </h3>
+                    <p className=" text-sm md:text-base mb-4">
+                      A health program designed to add health programs by doctors, register patients and enroll them in different programs.
                     </p>
                     <div className="flex justify-end">
                       <a
