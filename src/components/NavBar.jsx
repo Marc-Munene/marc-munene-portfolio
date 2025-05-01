@@ -1,9 +1,17 @@
 import { FaGithub } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
+import { HashLink } from "react-router-hash-link";
+import { useLocation } from "react-router-dom";
+
 const NavBar = () => {
+  const location = useLocation();
+
+  // Helper function to check active hash link
+  const isActive = (hash) => location.hash === hash;
+
   return (
-    <header className="sticky top-0 z-50  py-2 md:py-4 mx-auto max-w-6xl ">
-      <nav className="py-2 flex flex-row items-center justify-between mx-10 sm:mx-6 lg:mx-8 rounded-4xl backdrop-blur-3xl">
+    <header className="sticky top-0 z-50 py-2 md:py-4 mx-auto max-w-6xl">
+      <nav className="py-2 md:py-4 flex flex-row items-center shadow-lg justify-between mx-4 sm:mx-6 lg:mx-8 xl:mx-auto max-w-6xl rounded-4xl backdrop-blur-3xl px-2 sm:px-4">
         {/* logo */}
         <div className="flex-shrink-0">
           <a href="/">
@@ -15,18 +23,53 @@ const NavBar = () => {
           </a>
         </div>
 
-        {/*Navigatioon Links  */}
+        {/* Navigation Links */}
         <div className="hidden md:flex flex-grow justify-center">
-          <ul className="flex space-x-4 lg:space-x-8 text-sm sm:text-base md:text-xl lg:text-2xl">
+          <ul className="flex items-center space-x-2 sm:space-x-4 lg:space-x-6 xl:space-x-8">
             <li>
-              <a href="#about">About</a>
+              <HashLink
+                to="#about"
+                className={`flex items-center justify-around py-1 md:py-2 lg:py-3 px-2 sm:px-3 md:px-4 rounded-3xl transition-all duration-300 ease-in-out text-xs sm:text-sm md:text-base lg:text-xl 
+                  ${
+                    isActive("#about")
+                      ? "bg-blue-100 text-blue-700 scale-[1.08] shadow-2xl"
+                      : "hover:backdrop-blur-lg hover:rounded-4xl hover:shadow-2xl hover:bg-blue-100 hover:px-2 sm:hover:px-3 transform transform-fill hover:scale-[1.06]"
+                  }`}
+              >
+                <span className="flex items-center gap-1 sm:gap-2">
+                  <span>About</span>
+                </span>
+              </HashLink>
             </li>
-
             <li>
-              <a href="#work-experience">Experience</a>
+              <HashLink
+                to="#work-experience"
+                className={`flex items-center justify-around py-1 md:py-2 lg:py-3 px-2 sm:px-3 md:px-4 rounded-3xl transition-all duration-300 ease-in-out text-xs sm:text-sm md:text-base lg:text-xl 
+                  ${
+                    isActive("#work-experience")
+                      ? "bg-blue-100 text-blue-700 scale-[1.08] shadow-2xl"
+                      : "hover:backdrop-blur-lg hover:rounded-4xl hover:shadow-2xl hover:bg-blue-100 hover:px-2 sm:hover:px-3 transform transform-fill hover:scale-[1.06]"
+                  }`}
+              >
+                <span className="flex items-center gap-1 sm:gap-2">
+                  <span>Experience</span>
+                </span>
+              </HashLink>
             </li>
             <li>
-              <a href="#projects">Projects</a>
+              <HashLink
+                to="#projects"
+                className={`flex items-center justify-around py-1 md:py-2 lg:py-3 px-2 sm:px-3 md:px-4 rounded-3xl transition-all duration-300 ease-in-out text-xs sm:text-sm md:text-base lg:text-xl 
+                  ${
+                    isActive("#projects")
+                      ? "bg-blue-100 text-blue-700 scale-[1.08] shadow-2xl"
+                      : "hover:backdrop-blur-lg hover:rounded-4xl hover:shadow-2xl hover:bg-blue-100 hover:px-2 sm:hover:px-3 transform transform-fill hover:scale-[1.06]"
+                  }`}
+              >
+                <span className="flex items-center gap-1 sm:gap-2">
+                  <span>Projects</span>
+                </span>
+              </HashLink>
             </li>
           </ul>
         </div>
