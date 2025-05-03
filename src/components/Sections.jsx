@@ -1,7 +1,6 @@
 import { IoIosContact } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
 
-
 const Sections = () => {
   return (
     <>
@@ -102,6 +101,7 @@ const Sections = () => {
         </div>
       </section>
 
+      {/* Work experience section */}
       <section id="work-experience" className=" md:py-10">
         <div className="mx-auto  py-8 px-4 max-w-6xl">
           <div className="py-4 px-6 flex-col md:flex-row items-center gap-8 lg:gap-12 ">
@@ -258,7 +258,7 @@ const Sections = () => {
                 </div>
               </div>
             </div>
-            <div className="mt-5  flex justify-center ">
+            <div className="mt-20  flex justify-center ">
               <a href="https://github.com/Marc-Munene">
                 <button className="flex items-center border py-2 px-3 shadow-xl rounded-md cursor-pointer hover:bg-gray-100 transition-all duration-300 hover:shadow-md transform hover:-translate-y-0.5 hover:scale-[1.02] ">
                   <span>
