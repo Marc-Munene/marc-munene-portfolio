@@ -1,6 +1,7 @@
 import { IoIosContact } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
 import BlurText from "./BlurText/BlurText";
+import TrueFocus from "./TrueFocus/TrueFocus";
 
 const Sections = () => {
   return (
@@ -20,10 +21,18 @@ const Sections = () => {
 
             {/* Content - Adjusted for perfect laptop fit */}
             <div className="w-full md:w-7/12 lg:w-7/12 xl:w-8/12 text-center md:text-left">
-              <p className="text-lg sm:text-xl md:text-xl lg:text-2xl xl:text-3xl mb-2 md:mb-3">
-                <span className="text-pink-500">&lt;span&gt;</span>
-                Hey, I'm Marc Munene
-                <span className="text-pink-500">&lt;/span&gt;</span>
+              <p className="text-lg flex items-center justify-center sm:text-lg md:text-lg lg:text-xl xl:text-2xl mb-2 md:mb-3">
+                <span className="text-pink-500 mr-2">&lt;span&gt;</span>
+                Hey, I'm
+                <TrueFocus
+                  sentence=" Marc Munene"
+                  manualMode={false}
+                  blurAmount={5}
+                  borderColor="green"
+                  animationDuration={1}
+                  pauseBetweenAnimations={1}
+                />
+                <span className="text-pink-500 ml-2">&lt;/span&gt;</span>
               </p>
 
               <div className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-mono font-semibold leading-tight flex flex-wrap gap-2">
