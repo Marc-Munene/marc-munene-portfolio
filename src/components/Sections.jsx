@@ -180,21 +180,20 @@ const Sections = () => {
                 <div className="relative">
                   <img
                     className="w-full h-48 md:h-56 object-cover"
-                    src="/Classify.png"
+                    src="/class-space.png"
                     alt="Classify"
                   />
                 </div>
                 <div className="p-5">
                   <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">
-                    Classify
+                    Class-Space
                   </h3>
                   <p className="0 text-sm md:text-base mb-4">
-                    A web app meant for students to search for a vacant class to
-                    occupy, during a session or exams
+                    Class-Space is an intelligent web application designed to help students and class representatives easily locate and book vacant classrooms in real-time. It aims to eliminate the hassle of manual room allocation and prevent double bookings, making room management more efficient and organized.
                   </p>
                   <div className="flex justify-end">
                     <a
-                      href="https://classify-project.vercel.app/"
+                      href="https://class-space.vercel.app/"
                       target="blank"
                     >
                       <button className="bg-cyan-500 hover:bg-cyan-600 dark:bg-cyan-600 dark:hover:bg-cyan-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-0.5">
