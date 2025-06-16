@@ -12,6 +12,7 @@
   "dependencies": {
     "@gsap/react": "^2.1.2",
     "@tailwindcss/vite": "^4.1.4",
+    "framer-motion": "^12.18.1",
     "gsap": "^3.12.7",
     "imagesloaded": "^5.0.0",
     "react": "^19.0.0",

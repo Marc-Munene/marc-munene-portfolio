@@ -1,5 +1,6 @@
 import { IoIosContact } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
+import BlurText from "./BlurText/BlurText";
 
 const Sections = () => {
   return (
@@ -25,11 +26,23 @@ const Sections = () => {
                 <span className="text-pink-500">&lt;/span&gt;</span>
               </p>
 
-              <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-mono font-semibold leading-tight">
-                <span className="text-green-400">{`{Full Stack}`}</span>{" "}
-                <span className="block sm:inline">Web Developer</span>
-                <span className="text-cyan-500">_</span>
-              </h1>
+              <div className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-mono font-semibold leading-tight flex flex-wrap gap-2">
+                <BlurText
+                  text="{Full Stack}"
+                  delay={150}
+                  animateBy="words"
+                  direction="top"
+                  className="text-green-400"
+                ></BlurText>
+
+                <BlurText
+                  text="Web Developer"
+                  delay={150}
+                  animateBy="words"
+                  direction="top"
+                  className="block sm:inline"
+                ></BlurText>
+              </div>
 
               <p className="mt-3 sm:mt-4 md:mt-4 text-base sm:text-lg md:text-lg lg:text-xl xl:text-2xl leading-relaxed">
                 <span className="text-pink-500">&lt;p&gt;</span> With expertise
@@ -189,13 +202,15 @@ const Sections = () => {
                     Class-Space
                   </h3>
                   <p className="0 text-sm md:text-base mb-4">
-                    Class-Space is an intelligent web application designed to help students and class representatives easily locate and book vacant classrooms in real-time. It aims to eliminate the hassle of manual room allocation and prevent double bookings, making room management more efficient and organized.
+                    Class-Space is an intelligent web application designed to
+                    help students and class representatives easily locate and
+                    book vacant classrooms in real-time. It aims to eliminate
+                    the hassle of manual room allocation and prevent double
+                    bookings, making room management more efficient and
+                    organized.
                   </p>
                   <div className="flex justify-end">
-                    <a
-                      href="https://class-space.vercel.app/"
-                      target="blank"
-                    >
+                    <a href="https://class-space.vercel.app/" target="blank">
                       <button className="bg-cyan-500 hover:bg-cyan-600 dark:bg-cyan-600 dark:hover:bg-cyan-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-0.5">
                         View Demo
                       </button>
