@@ -197,7 +197,7 @@ const Sections = () => {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 w-full max-w-7xl">
-              {/* Classify */}
+              {/* Class-Space */}
               <div className=" rounded-xl shadow-md overflow-hidden transition-transform hover:scale-[1.02] hover:shadow-lg">
                 <div className="relative">
                   <img
@@ -220,6 +220,38 @@ const Sections = () => {
                   </p>
                   <div className="flex justify-end">
                     <a href="https://class-space.vercel.app/" target="blank">
+                      <button className="bg-cyan-500 hover:bg-cyan-600 dark:bg-cyan-600 dark:hover:bg-cyan-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-0.5">
+                        View Demo
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              {/* Chama */}
+              <div className=" rounded-xl shadow-md overflow-hidden transition-transform hover:scale-[1.02] hover:shadow-lg">
+                <div className="relative">
+                  <img
+                    className="w-full h-48 md:h-56 object-cover"
+                    src="/chama.png"
+                    alt="Chama app"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">
+                    Chama
+                  </h3>
+                  <p className="0 text-sm md:text-base mb-4">
+                    Chama is a web-based platform designed to simplify and
+                    streamline group contributions and savings. Built with a
+                    user-friendly interface, it allows members to securely
+                    contribute funds, track group balances, view transaction
+                    history, and manage group goals in real-time. The system
+                    promotes transparency and accountability, making it ideal
+                    for community savings groups, investment clubs, and informal
+                    cooperative societies.
+                  </p>
+                  <div className="flex justify-end">
+                    <a href="http://chama-blue.vercel.app/" target="blank">
                       <button className="bg-cyan-500 hover:bg-cyan-600 dark:bg-cyan-600 dark:hover:bg-cyan-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-0.5">
                         View Demo
                       </button>
