@@ -35,7 +35,7 @@ const Sections = () => {
                 {/* <span className="text-pink-500 ml-2">&lt;/span&gt;</span> */}
               </p>
 
-              <div className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-mono font-semibold leading-tight flex flex-wrap gap-2">
+              <div className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-mono font-semibold leading-tight flex flex-wrap items-center justify-center gap-2">
                 <BlurText
                   text="{Full Stack}"
                   delay={150}
