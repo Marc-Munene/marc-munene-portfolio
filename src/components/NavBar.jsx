@@ -10,7 +10,7 @@ const NavBar = () => {
   const isActive = (hash) => location.hash === hash;
 
   return (
-    <header className="sticky top-0 z-50 py-2 md:py-4 mx-auto max-w-6xl ">
+    <header className="sticky top-0 z-50 mx-auto max-w-6xl ">
       <nav className="py-2 md:py-4 flex flex-row items-center shadow-lg justify-between mx-4 sm:mx-6 lg:mx-8 xl:mx-auto max-w-6xl rounded-4xl backdrop-blur-3xl px-2 sm:px-4 bg-gray-100 ">
         {/* logo */}
         <div className="flex-shrink-0">
