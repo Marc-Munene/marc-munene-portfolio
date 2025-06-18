@@ -15,7 +15,7 @@ const Projects = () => {
             </div>
 
             {/* Projects Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 w-full max-w-7xl">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 w-full max-w-7xl ">
               {projectData.map((project, index) => (
                 <div
                   key={index}
@@ -33,7 +33,7 @@ const Projects = () => {
                       {project.title}
                     </h3>
                     <p className="text-sm md:text-base mb-4">
-                      {project.description}
+                      {project.description.substring(0, 120)}...
                     </p>
                     <div>
                       <a

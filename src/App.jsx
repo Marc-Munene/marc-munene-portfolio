@@ -1,5 +1,5 @@
 import { NavBar } from "./components/NavBar";
-import { Footer } from "./components/Footer";
+import { Footer } from "./components/Sections/Footer";
 
 // import { Sections } from "./components/Sections";
 import { Hero } from "./components/Sections/Hero";
@@ -22,8 +22,9 @@ const App = () => {
         <About />
         <WorkExperience />
         <Projects />
-
         <Footer />
+
+        {/* <Footer /> */}
       </div>
     </div>
   );
