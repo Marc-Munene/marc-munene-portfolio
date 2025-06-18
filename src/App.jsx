@@ -1,6 +1,8 @@
 import { NavBar } from "./components/NavBar";
 import { Footer } from "./components/Footer";
-import { Sections } from "./components/Sections";
+
+// import { Sections } from "./components/Sections";
+import { Hero } from "./components/Sections/Hero";
 // import { initScrollAnimations } from "./animations/scrollAmination";
 
 const App = () => {
@@ -11,7 +13,8 @@ const App = () => {
       <div>
         <NavBar />
 
-        <Sections />
+        {/* <Sections /> */}
+        <Hero />
 
         <Footer />
       </div>
