@@ -7,6 +7,7 @@ import { About } from "./components/Sections/About";
 import { WorkExperience } from "./components/Sections/WorkExperience";
 import { GoProjectSymlink } from "react-icons/go";
 import { Projects } from "./components/Sections/projects";
+import { ScrollToTop } from "./components/ScrollToTop";
 // import { initScrollAnimations } from "./animations/scrollAmination";
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
         <About />
         <WorkExperience />
         <Projects />
+        <ScrollToTop />
         <Footer />
 
         {/* <Footer /> */}
