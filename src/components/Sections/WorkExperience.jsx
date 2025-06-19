@@ -13,12 +13,45 @@ const WorkExperience = () => {
                   Work Experience
                 </h1>
               </div>
+              <div className="flex flex-col gap-4 mb-6">
+                <div className="flex select-none">
+                  {/* Company Logo */}
+                  <div className="flex-none">
+                    <img
+                      className="w-12 h-12 rounded-full border-2 border-gray-300"
+                      src="/marc-logo.jpg"
+                      alt="Usalama Logo"
+                    />
+                  </div>
+
+                  {/* Text Info */}
+                  <div className="flex-grow ml-4 flex flex-col cursor-pointer">
+                    <div className="flex flex-col">
+                      <div className="w-full flex justify-between">
+                        <p className="font-semibold text-xs sm:text-sm text-black">
+                          Free-Lance Software Developer 
+                        </p>
+                        <p className="text-xs sm:text-sm text-gray-600 whitespace-nowrap">
+                          Aug 2024 -
+                        </p>
+                      </div>
+                    </div>
+
+                    <p className="mt-2 text-base sm:text-lg ">
+                      As a freelance software developer, I specialize in
+                      designing and building modern, responsive web applications
+                      tailored to client needs. I work across the full
+                      development lifecycle—from gathering requirements and
+                      planning features to deploying fully functional web apps.
+                      Leveraging the MERN stack (MongoDB, Express.js, React.js,
+                      Node.js), I deliver scalable and efficient solutions while
+                      ensuring strong UI/UX design and web interactivity.
+                    </p>
+                  </div>
+                </div>
+              </div>
               <div className="flex flex-col md:flex-row items-center gap-5 lg:gap-10">
                 <div className="mb-10">
-                  <p className="font-bold text-xl leading-normal mb-3">
-                    Work Experience
-                  </p>
-
                   <div className="flex flex-col gap-4">
                     <div className="flex select-none">
                       {/* Company Logo */}
