@@ -8,7 +8,7 @@ const Hero = () => {
     <>
       <section
         id="hero"
-        className="relative min-h-screen md:py-8 flex items-center"
+        className="relative min-h-screen md:py-8 flex items-center justify-center"
         style={{
           backgroundImage: "url('/munene-bg.jpg')",
           backgroundSize: "cover",
