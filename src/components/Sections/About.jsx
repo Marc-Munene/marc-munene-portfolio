@@ -27,6 +27,18 @@ const About = () => {
                     and laugh at my own bugs (after fixing them). Let us create
                     something awesome—preferably with fewer merge conflicts.
                   </p>
+                  <div className="mt-5">
+                    <p className="text-base sm:text-lg leading-relaxed">
+                      <span className="text-xl font-bold">What I Deliver:</span>{" "}
+                      <br />✔ Robust Web Applications – From concept to
+                      deployment <br /> ✔ Optimized Performance – Fast,
+                      responsive, and scalable solutions <br />✔ Clean &
+                      Maintainable Code – Following best practices and industry
+                      standards <br /> ✔ Innovative Problem-Solving – Turning
+                      complex challenges into elegant solutions Let’s build
+                      something amazing.
+                    </p>
+                  </div>
                 </div>
 
                 {/* Image */}

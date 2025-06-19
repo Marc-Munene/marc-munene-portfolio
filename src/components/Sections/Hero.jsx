@@ -55,7 +55,7 @@ const Hero = () => {
                     className="text-green-400"
                   />
                   <BlurText
-                    text="Software Developer"
+                    text="Software Developer."
                     delay={150}
                     animateBy="words"
                     direction="top"
@@ -64,10 +64,12 @@ const Hero = () => {
                 </div>
 
                 <p className="mt-3 sm:mt-4 md:mt-4 text-base sm:text-lg md:text-lg lg:text-xl xl:text-2xl leading-relaxed text-white drop-shadow-md">
-                  With expertise in developing software with the MERN Stack -
-                  MongoDB , Express.js, React, Node.js. Additionally,
-                  self-taught Python, TypeScript, and Next.js... I deliver
-                  innovative and robust web solutions.
+                  Passionate about crafting high-performance, scalable web
+                  applications with cutting-edge technologies. Expertise in the
+                  MERN Stack (MongoDB, Express.js, React, Node.js), complemented
+                  by proficiency in Python, TypeScript, and Next.js. Dedicated
+                  to building seamless, user-centric solutions with clean,
+                  maintainable code and modern development practices.
                 </p>
 
                 <div className="mt-5 sm:mt-6 md:mt-6">
