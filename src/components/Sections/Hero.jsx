@@ -46,7 +46,7 @@ const Hero = () => {
                   />
                 </p>
 
-                <div className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-mono font-semibold leading-tight flex flex-wrap items-center justify-center md:justify-start gap-2 drop-shadow-lg">
+                <div className="text-3xl sm:text-4xl font-mono font-semibold leading-tight flex flex-wrap items-center justify-center md:justify-start gap-2 drop-shadow-lg">
                   <BlurText
                     text="{Full Stack}"
                     delay={150}
@@ -55,7 +55,7 @@ const Hero = () => {
                     className="text-green-400"
                   />
                   <BlurText
-                    text="Web Developer"
+                    text="Software Developer"
                     delay={150}
                     animateBy="words"
                     direction="top"
