@@ -111,7 +111,7 @@ const Footer = () => {
 
             {/* Social Media */}
             <div className="space-y-4">
-              <h3 className="text-xl font-semibold">Connect With Me</h3>
+              <h3 className="text-xl font-semibold">Connect With Us</h3>
               <div className="flex space-x-4">
                 <a
                   href="https://github.com/Marc-Munene"

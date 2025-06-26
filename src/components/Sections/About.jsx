@@ -10,7 +10,7 @@ const About = () => {
               {/* section title */}
               <div className="flex justify-center sm:justify-center md:justify-start lg:justify-start items-center">
                 <h1 className="border-transparent py-1 px-2 rounded-md bg-gray-300 text-sm sm:text-base md:text-lg lg:text-xl w-auto sm:w-[8%] min-w-max">
-                  About Me
+                  About Us
                 </h1>
               </div>
 
@@ -22,14 +22,21 @@ const About = () => {
                     Crafting clean code & building seamless experiences.
                   </p>
                   <p className=" text-base sm:text-lg leading-relaxed">
-                    Full-stack developer by day, debugger by night, and caffeine
-                    enthusiast 24/7. I build things that work (most of the time)
-                    and laugh at my own bugs (after fixing them). Let us create
-                    something awesome—preferably with fewer merge conflicts.
+                    Optimized for daytime deployment and night time debugging
+                    cycles, Munene.Dev is a caffeine-fueled, full-stack
+                    development system engineered to build, break, and
+                    beautifully rebuild digital solutions. Featuring
+                    high-performance logic processors, a resilient error
+                    recovery module (with a good sense of humor), and a strong
+                    preference for low merge conflict environments. Let’s
+                    compile creativity, ship clean code, and debug
+                    reality together.
                   </p>
                   <div className="mt-5">
                     <p className="text-base sm:text-lg leading-relaxed">
-                      <span className="text-xl font-bold">What I Deliver:</span>{" "}
+                      <span className="text-xl font-bold">
+                        What we Deliver:
+                      </span>{" "}
                       <br />✔ Robust Web Applications – From concept to
                       deployment <br /> ✔ Optimized Performance – Fast,
                       responsive, and scalable solutions <br />✔ Clean &

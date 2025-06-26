@@ -20,16 +20,16 @@ const WorkExperience = () => {
                     <img
                       className="w-12 h-12 rounded-full border-2 border-gray-300"
                       src="/marc-logo.jpg"
-                      alt="Usalama Logo"
+                      alt="Munene.dev Logo"
                     />
                   </div>
 
                   {/* Text Info */}
-                  <div className="flex-grow ml-4 flex flex-col cursor-pointer">
+                  <div className="flex-grow ml-4 flex flex-col cursor-pointer mb-1">
                     <div className="flex flex-col">
                       <div className="w-full flex justify-between">
                         <p className="font-semibold text-xs sm:text-sm text-black">
-                          Free-Lance Software Developer 
+                          Founder & CEO - Munene.Dev
                         </p>
                         <p className="text-xs sm:text-sm text-gray-600 whitespace-nowrap">
                           Aug 2024 -
@@ -38,14 +38,18 @@ const WorkExperience = () => {
                     </div>
 
                     <p className="mt-2 text-base sm:text-lg ">
-                      As a freelance software developer, I specialize in
-                      designing and building modern, responsive web applications
-                      tailored to client needs. I work across the full
-                      development lifecycle—from gathering requirements and
-                      planning features to deploying fully functional web apps.
-                      Leveraging the MERN stack (MongoDB, Express.js, React.js,
-                      Node.js), I deliver scalable and efficient solutions while
-                      ensuring strong UI/UX design and web interactivity.
+                      Munene.Dev is a full-cycle, freelance development platform
+                      engineered to architect and deploy modern, responsive web
+                      applications tailored to specific client needs. From
+                      requirements parsing and feature mapping to live
+                      production deployment, the system handles the entire
+                      development pipeline with precision and agility. Powered
+                      by the MERN Stack core (MongoDB, Express.js, React.js,
+                      Node.js), Munene.Dev delivers scalable, efficient web
+                      solutions enhanced with high-performance UI/UX rendering
+                      and seamless interactivity protocols. Whether you’re
+                      launching a startup module or optimizing a legacy system,
+                      Munene.Dev adapts, integrates, and evolves—on demand.
                     </p>
                   </div>
                 </div>
