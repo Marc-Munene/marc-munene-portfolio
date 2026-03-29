@@ -13,6 +13,50 @@ const WorkExperience = () => {
                   Work Experience
                 </h1>
               </div>
+
+              <div className="flex flex-col gap-2 mb-6">
+                <div className="flex select-none">
+                  {/* Company Logo */}
+                  <div className="flex-none">
+                    <img
+                      className="w-12 h-12 rounded-full border-2 border-gray-300 object-cover object-center"
+                      src="/innovex-logo.jpg"
+                      alt="Innovex Logo"
+                    />
+                  </div>
+
+                  {/* Text Info */}
+                  <div className="flex-grow ml-4 flex flex-col cursor-pointer mb-1">
+                    <div className="flex flex-col">
+                      <div className="w-full flex justify-between">
+                        <p className="font-semibold text-xs sm:text-sm text-black">
+                          Full Stack Software Developer
+                        </p>
+                        <p className="text-xs sm:text-sm text-gray-600 whitespace-nowrap">
+                          Sep 2024 / 2025 - Present
+                        </p>
+                      </div>
+                    </div>
+
+                    <p className="mt-2 text-base sm:text-lg ">
+                      Led a pivotal role in the end-to-end redevelopment of a
+                      nationwide enterprise sales portal for Sanlam Allianz
+                      General Insurance Kenya. Leveraged a modern tech
+                      stack—Angular, TypeScript, FastAPI, Docker, and Azure
+                      CI/CDto build a scalable and high-performance platform
+                      used by agents and branches across the country. Focused on
+                      delivering robust features for core insurance operations,
+                      including new business, renewals, and vehicle valuations,
+                      while ensuring system security and regulatory compliance
+                      through third-party API integrations. Collaborated within
+                      an Agile team to translate complex business requirements
+                      into intuitive user interfaces and reliable server-side
+                      logic, contributing to a successful platform launch.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
               <div className="flex flex-col gap-4 mb-6">
                 <div className="flex select-none">
                   {/* Company Logo */}
@@ -32,7 +76,7 @@ const WorkExperience = () => {
                           Founder & CEO - Munene.Dev
                         </p>
                         <p className="text-xs sm:text-sm text-gray-600 whitespace-nowrap">
-                          Aug 2024 -
+                          Aug 2024 - Present
                         </p>
                       </div>
                     </div>
@@ -81,8 +125,8 @@ const WorkExperience = () => {
                         </div>
 
                         <p className="mt-2 text-base sm:text-lg ">
-                          I contributed to the design, development, and testing
-                          of web-based applications by writing clean, efficient,
+                          I led to the design, development, and testing of
+                          web-based applications by writing clean, efficient,
                           and maintainable code. I collaborated with senior
                           developers to troubleshoot issues, implement new
                           features, and enhance existing systems using modern
