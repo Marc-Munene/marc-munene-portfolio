@@ -67,9 +67,10 @@ const Hero = () => {
                   Passionate about crafting high-performance, scalable web
                   applications with cutting-edge technologies. Expertise in the
                   MERN Stack (MongoDB, Express.js, React, Node.js), complemented
-                  by proficiency in Python, TypeScript, and Next.js. Dedicated
-                  to building seamless, user-centric solutions with clean,
-                  maintainable code and modern development practices.
+                  by proficiency in Angular, TypeScript, SQL databases and
+                  Next.js. Dedicated to building seamless, user-centric
+                  solutions with clean, maintainable code and modern development
+                  practices.
                 </p>
 
                 <div className="mt-5 sm:mt-6 md:mt-6">
