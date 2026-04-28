@@ -1,75 +1,65 @@
 import { FaGithub } from "react-icons/fa";
 import { projectData } from "../../../projects";
 import { RevealOnScroll } from "./RevealOnScroll";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   return (
-    <>
-      <section id="projects" className="  md:py-10">
-        <RevealOnScroll>
-          <div className="mx-auto  py-8 px-4 max-w-6xl">
-            <div className="py-4 px-6 flex-col md:flex-row items-center gap-8 lg:gap-12">
-              {/* section title */}
-              <div className="flex justify-center sm:justify-center md:justify-start lg:justify-start items-center mb-5">
-                <h1 className="border-transparent py-1 px-2 rounded-md bg-gray-200 text-sm sm:text-base md:text-lg lg:text-xl w-auto sm:w-[8%] min-w-max">
-                  Projects
-                </h1>
-              </div>
+    <section id="projects" className="py-10 md:py-14">
+      <RevealOnScroll delay={0.12}>
+        <div className="mx-auto px-4 max-w-6xl">
+          <div className="glass-panel rounded-3xl p-6 md:p-10">
+            <div className="inline-flex rounded-full border border-cyan-400/40 bg-cyan-400/10 px-4 py-1 text-sm text-cyan-200">
+              Projects
+            </div>
 
-              {/* Projects Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 w-full max-w-7xl ">
-                {projectData.map((project, index) => (
-                  <div
-                    key={index}
-                    className=" rounded-xl shadow-md overflow-hidden transition-transform hover:scale-[1.02] hover:shadow-lg"
-                  >
-                    <div className="relative">
-                      <img
-                        className="w-full h-48 md:h-56 object-cover"
-                        src={project.image}
-                        alt={project.title}
-                      />
-                    </div>
-                    <div className="p-5">
-                      <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">
-                        {project.title}
-                      </h3>
-                      <p className="text-sm md:text-base mb-4">
-                        {project.description.substring(0, 120)}...
-                      </p>
-                      <div>
-                        <a
-                          href={project.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <button className="bg-cyan-500 hover:bg-cyan-600 dark:bg-cyan-600 dark:hover:bg-cyan-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-0.5">
-                            View Demo
-                          </button>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              {/* GitHub CTA */}
-              <div className="mt-20 flex justify-center">
-                <a
-                  href="https://github.com/Marc-Munene"
-                  target="_blank"
-                  rel="noopener noreferrer"
+            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {projectData.map((project) => (
+                <motion.article
+                  whileHover={{ y: -6 }}
+                  key={project.title}
+                  className="rounded-2xl border border-slate-600/45 bg-slate-950/55 overflow-hidden"
                 >
-                  <button className="flex items-center border py-2 px-3 shadow-xl rounded-md cursor-pointer hover:bg-gray-100 transition-all duration-300 hover:shadow-md transform hover:-translate-y-0.5 hover:scale-[1.02]">
-                    <FaGithub size={24} className="mr-2" />
-                    More on GitHub
-                  </button>
-                </a>
-              </div>
+                  <img
+                    className="w-full h-48 md:h-56 object-cover"
+                    src={project.image}
+                    alt={project.title}
+                  />
+                  <div className="p-5">
+                    <h3 className="text-lg md:text-xl font-semibold text-slate-100 mb-2">
+                      {project.title}
+                    </h3>
+                    <p className="text-sm md:text-base mb-4 text-slate-300">
+                      {project.description.substring(0, 125)}...
+                    </p>
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex rounded-lg bg-cyan-400 text-slate-950 px-4 py-2 font-medium transition-all duration-300 hover:bg-cyan-300"
+                    >
+                      View Demo
+                    </a>
+                  </div>
+                </motion.article>
+              ))}
+            </div>
+
+            <div className="mt-12 flex justify-center">
+              <a
+                href="https://github.com/Marc-Munene"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-xl border border-slate-500 px-4 py-3 text-slate-100 transition-all duration-300 hover:border-cyan-300 hover:text-cyan-200"
+              >
+                <FaGithub size={22} />
+                More on GitHub
+              </a>
             </div>
           </div>
-        </RevealOnScroll>
-      </section>
-    </>
+        </div>
+      </RevealOnScroll>
+    </section>
   );
 };
 
