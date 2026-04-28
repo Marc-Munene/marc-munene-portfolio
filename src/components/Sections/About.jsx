@@ -2,69 +2,46 @@ import { RevealOnScroll } from "./RevealOnScroll";
 
 const About = () => {
   return (
-    <>
-      <section id="about" className="md:py-10">
-        <RevealOnScroll>
-          <div className="mx-auto max-w-6xl py-8 px-4">
-            <div className="py-4 px-6 flex-col md:flex-row items-center gap-8 lg:gap-12">
-              {/* section title */}
-              <div className="flex justify-center sm:justify-center md:justify-start lg:justify-start items-center">
-                <h1 className="border-transparent py-1 px-2 rounded-md bg-gray-300 text-sm sm:text-base md:text-lg lg:text-xl w-auto sm:w-[8%] min-w-max">
-                  About Me
-                </h1>
+    <section id="about" className="py-10 md:py-14">
+      <RevealOnScroll delay={0.05}>
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="glass-panel rounded-3xl p-6 md:p-10">
+            <div className="inline-flex rounded-full border border-cyan-400/40 bg-cyan-400/10 px-4 py-1 text-sm text-cyan-200">
+              About Me
+            </div>
+
+            <div className="mt-6 flex flex-col md:flex-row items-center gap-8 lg:gap-12">
+              <div className="md:flex-1 text-center md:text-left">
+                <p className="text-2xl md:text-3xl font-bold mb-4 text-slate-100">
+                  Full-Stack Developer crafting robust, scalable web solutions.
+                </p>
+                <p className="text-base sm:text-lg leading-relaxed text-slate-300">
+                  I am a self-driven developer with a proven track record in
+                  designing and shipping end-to-end products. My expertise spans
+                  front-end frameworks, backend services, and databases, with a
+                  strong focus on performance, security, and reliability.
+                </p>
+                <ul className="mt-5 space-y-2 text-left text-slate-300">
+                  <li>• End-to-end delivery from idea to deployment</li>
+                  <li>• Scalable architecture with React, Angular, FastAPI, Node.js</li>
+                  <li>• DevOps automation through Docker and CI/CD pipelines</li>
+                  <li>• Clean, maintainable code and collaborative workflows</li>
+                </ul>
               </div>
 
-              {/* content container */}
-              <div className="flex flex-col md:flex-row items-center gap-5 lg:gap-10">
-                {/* Text Content */}
-                <div className="md:flex-1 text-center md:text-left">
-                  <p className="text-lg sm:text-xl md:text-2xl font-bold mb-4">
-                    Full-Stack Developer crafting robust, scalable web
-                    solutions.
-                  </p>
-                  <p className="text-base sm:text-lg leading-relaxed">
-                    I'm a self-driven Full-Stack Developer with a proven track
-                    record in designing, building, and enhancing end-to-end web
-                    applications. My expertise spans the entire technology
-                    stack—from front-end frameworks like Angular and React to
-                    server-side technologies and database management. I thrive
-                    in Agile environments, implementing CI/CD pipelines and
-                    ensuring high-performance, secure, and responsive
-                    applications that drive real business value.
-                  </p>
-                  <div className="mt-5">
-                    <p className="text-base sm:text-lg leading-relaxed">
-                      <span className="text-xl font-bold">What we Bring:</span>{" "}
-                      <br />
-                      ✔ End-to-End Development – From concept to deployment,
-                      handling both front-end and back-end <br />
-                      ✔ Scalable Architecture – Building robust systems using
-                      Angular, React, FastAPI, Node.js <br />
-                      ✔ DevOps & Automation – Docker, CI/CD pipelines, Azure
-                      DevOps for efficient deployments <br />
-                      ✔ Clean, Maintainable Code – Following best practices,
-                      conducting thorough code reviews <br />✔ Collaborative
-                      Problem-Solving – Working with cross-functional teams to
-                      deliver impactful solutions
-                    </p>
-                  </div>
-                </div>
-
-                {/* Image */}
-                <div className="md:flex-shrink-0">
-                  <img
-                    src="/about-munene.jpg"
-                    alt="Marc Munene - Full-Stack Developer"
-                    className="rounded-lg shadow-xl w-full max-w-xs sm:max-w-sm md:w-80 lg:w-96 h-auto object-cover border-4 border-none"
-                    loading="lazy"
-                  />
-                </div>
+              <div className="md:flex-shrink-0">
+                <img
+                  src="/about-munene.jpg"
+                  alt="Marc Munene - Full-Stack Developer"
+                  className="rounded-2xl shadow-2xl w-full max-w-xs sm:max-w-sm md:w-80 lg:w-96 h-auto object-cover border border-slate-600/50"
+                  loading="lazy"
+                />
               </div>
             </div>
           </div>
-        </RevealOnScroll>
-      </section>
-    </>
+        </div>
+      </RevealOnScroll>
+    </section>
   );
 };
 
