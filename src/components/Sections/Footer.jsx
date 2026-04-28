@@ -2,19 +2,19 @@ import { FaGithub } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
 import { IoIosContact } from "react-icons/io";
 import { RevealOnScroll } from "./RevealOnScroll";
+
 const Footer = () => {
   return (
-    <footer id="contact" className=" py-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <footer id="contact" className="py-12 px-4 sm:px-6 lg:px-8">
       <RevealOnScroll>
-        <div className="max-w-6xl mx-auto ">
+        <div className="max-w-6xl mx-auto glass-panel rounded-3xl p-6 md:p-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Contact Info */}
             <div className="space-y-4">
-              <h3 className="text-xl font-semibold">Get In Touch</h3>
+              <h3 className="text-xl font-semibold text-slate-100">Get In Touch</h3>
               <div className="space-y-2">
                 <div className="flex items-center">
                   <svg
-                    className="w-5 h-5mr-3"
+                    className="w-5 h-5 mr-3"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -29,7 +29,7 @@ const Footer = () => {
                   </svg>
                   <a
                     href="mailto:marcmunene104@gmail.com"
-                    className=" hover:text-cyan-500 transition-colors"
+                    className="text-slate-300 hover:text-cyan-300 transition-colors"
                   >
                     marcmunene104@gmail.com
                   </a>
@@ -49,7 +49,7 @@ const Footer = () => {
                       d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                     />
                   </svg>
-                  <span className="">+254 745 851 127</span>
+                  <span className="text-slate-300">+254 745 851 127</span>
                 </div>
                 <div className="flex items-center">
                   <svg
@@ -72,19 +72,18 @@ const Footer = () => {
                       d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                     />
                   </svg>
-                  <span className="">Nairobi, Kenya</span>
+                  <span className="text-slate-300">Nairobi, Kenya</span>
                 </div>
               </div>
             </div>
 
-            {/* Quick Links */}
             <div className="space-y-4">
-              <h3 className="text-xl font-semibold">Quick Links</h3>
+              <h3 className="text-xl font-semibold text-slate-100">Quick Links</h3>
               <ul className="space-y-2">
                 <li>
                   <a
                     href="#about"
-                    className=" hover:text-cyan-500 transition-colors"
+                    className="text-slate-300 hover:text-cyan-300 transition-colors"
                   >
                     About
                   </a>
@@ -92,7 +91,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="#work-experience"
-                    className=" hover:text-cyan-500 transition-colors"
+                    className="text-slate-300 hover:text-cyan-300 transition-colors"
                   >
                     Experience
                   </a>
@@ -100,24 +99,22 @@ const Footer = () => {
                 <li>
                   <a
                     href="#projects"
-                    className=" hover:text-cyan-500 transition-colors"
+                    className="text-slate-300 hover:text-cyan-300 transition-colors"
                   >
                     Projects
                   </a>
                 </li>
-                <li></li>
               </ul>
             </div>
 
-            {/* Social Media */}
             <div className="space-y-4">
-              <h3 className="text-xl font-semibold">Connect With Us</h3>
+              <h3 className="text-xl font-semibold text-slate-100">Connect With Me</h3>
               <div className="flex space-x-4">
                 <a
                   href="https://github.com/Marc-Munene"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className=" hover:bg-black hover:text-white transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-0.5 cursor-pointer  "
+                  className="text-slate-300 hover:text-white transition-all duration-300"
                 >
                   <FaGithub size={24} className="h-6 w-6" />
                 </a>
@@ -125,7 +122,7 @@ const Footer = () => {
                   href="https://www.instagram.com/its__munene/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className=" hover:text-pink-600 transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-0.5 cursor-pointer"
+                  className="text-slate-300 hover:text-pink-300 transition-all duration-300"
                 >
                   <BsInstagram size={24} className="h-6 w-6 " />
                 </a>
@@ -133,7 +130,7 @@ const Footer = () => {
                   href="https://www.linkedin.com/in/marc-munene-628a43362/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className=" hover:text-blue-600 transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-0.5 cursor-pointer"
+                  className="text-slate-300 hover:text-blue-300 transition-all duration-300"
                 >
                   <svg
                     className="h-6 w-6"
@@ -146,11 +143,10 @@ const Footer = () => {
                 </a>
               </div>
 
-              {/* Contact Form Button */}
               <div className="pt-4">
                 <a
                   href="mailto:marcmunene104@gmail.com"
-                  className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-smbg-cyan-500 hover:bg-cyan-600 dark:bg-cyan-600 dark:hover:bg-cyan-700 text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-0.5 cursor-pointer"
+                  className="inline-flex items-center rounded-xl bg-cyan-400 text-slate-950 px-4 py-2 font-semibold transition-all duration-300 hover:bg-cyan-300"
                 >
                   <IoIosContact className="mr-2" size={24} />
                   Send me a message
@@ -159,9 +155,8 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Copyright */}
-          <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700 text-center">
-            <p className=" text-sm">
+          <div className="mt-12 pt-8 border-t border-slate-700 text-center">
+            <p className="text-sm text-slate-400">
               &copy; {new Date().getFullYear()} Marc Munene. All rights
               reserved.
             </p>
