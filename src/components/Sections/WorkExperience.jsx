@@ -1,152 +1,73 @@
 import { RevealOnScroll } from "./RevealOnScroll";
 
+const experiences = [
+  {
+    company: "Innovex",
+    logo: "/innovex-logo.jpg",
+    role: "Full Stack Software Developer",
+    period: "Sep 2024 - Present",
+    description:
+      "Led end-to-end redevelopment of a nationwide enterprise sales portal for Sanlam Allianz Kenya using Angular, TypeScript, FastAPI, Docker, and Azure CI/CD, focusing on scale, security, and production reliability.",
+  },
+  {
+    company: "Munene.Dev",
+    logo: "/marc-logo.jpg",
+    role: "Founder & CEO",
+    period: "Aug 2024 - Present",
+    description:
+      "Built and run a full-cycle freelance development platform delivering modern web applications from requirement mapping to production deployment, powered by scalable MERN-based architecture.",
+  },
+  {
+    company: "Usalama",
+    logo: "/usalama.jpg",
+    role: "Junior Software Developer Intern",
+    period: "Feb 2024 - Aug 2024",
+    description:
+      "Contributed to building and testing web applications, implemented new features with senior engineers, and improved performance through practical full-stack and agile collaboration experience.",
+  },
+];
+
 const WorkExperience = () => {
   return (
-    <>
-      <section id="work-experience" className=" md:py-10">
-        <RevealOnScroll>
-          <div className="mx-auto  py-8 px-4 max-w-6xl">
-            <div className="py-4 px-6 flex-col md:flex-row items-center gap-8 lg:gap-12 ">
-              {/* section title */}
-              <div className="flex justify-center sm:justify-center md:justify-start lg:justify-start items-center mb-5">
-                <h1 className="border-transparent py-1 px-2 rounded-md bg-gray-200 text-sm sm:text-base md:text-lg lg:text-xl w-auto sm:w-[8%] min-w-max">
-                  Work Experience
-                </h1>
-              </div>
+    <section id="work-experience" className="py-10 md:py-14">
+      <RevealOnScroll delay={0.08}>
+        <div className="mx-auto px-4 max-w-6xl">
+          <div className="glass-panel rounded-3xl p-6 md:p-10">
+            <div className="inline-flex rounded-full border border-cyan-400/40 bg-cyan-400/10 px-4 py-1 text-sm text-cyan-200">
+              Work Experience
+            </div>
 
-              <div className="flex flex-col gap-2 mb-6">
-                <div className="flex select-none">
-                  {/* Company Logo */}
-                  <div className="flex-none">
+            <div className="mt-6 space-y-5">
+              {experiences.map((experience) => (
+                <article
+                  key={experience.company + experience.role}
+                  className="rounded-2xl border border-slate-600/45 bg-slate-900/50 p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-300/60"
+                >
+                  <div className="flex gap-4">
                     <img
-                      className="w-12 h-12 rounded-full border-2 border-gray-300 object-cover object-center"
-                      src="/innovex-logo.jpg"
-                      alt="Innovex Logo"
+                      className="w-12 h-12 rounded-full border border-slate-500 object-cover object-center"
+                      src={experience.logo}
+                      alt={`${experience.company} logo`}
                     />
-                  </div>
-
-                  {/* Text Info */}
-                  <div className="flex-grow ml-4 flex flex-col cursor-pointer mb-1">
-                    <div className="flex flex-col">
-                      <div className="w-full flex justify-between">
-                        <p className="font-semibold text-xs sm:text-sm text-black">
-                          Full Stack Software Developer
-                        </p>
-                        <p className="text-xs sm:text-sm text-gray-600 whitespace-nowrap">
-                          Sep 2024 / 2025 - Present
-                        </p>
+                    <div className="flex-1">
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+                        <h3 className="font-semibold text-base text-slate-100">
+                          {experience.role}
+                        </h3>
+                        <p className="text-sm text-slate-400">{experience.period}</p>
                       </div>
-                    </div>
-
-                    <p className="mt-2 text-base sm:text-lg ">
-                      Led a pivotal role in the end-to-end redevelopment of a
-                      nationwide enterprise sales portal for Sanlam Allianz
-                      General Insurance Kenya. Leveraged a modern tech
-                      stack—Angular, TypeScript, FastAPI, Docker, and Azure
-                      CI/CDto build a scalable and high-performance platform
-                      used by agents and branches across the country. Focused on
-                      delivering robust features for core insurance operations,
-                      including new business, renewals, and vehicle valuations,
-                      while ensuring system security and regulatory compliance
-                      through third-party API integrations. Collaborated within
-                      an Agile team to translate complex business requirements
-                      into intuitive user interfaces and reliable server-side
-                      logic, contributing to a successful platform launch.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex flex-col gap-4 mb-6">
-                <div className="flex select-none">
-                  {/* Company Logo */}
-                  <div className="flex-none">
-                    <img
-                      className="w-12 h-12 rounded-full border-2 border-gray-300"
-                      src="/marc-logo.jpg"
-                      alt="Munene.dev Logo"
-                    />
-                  </div>
-
-                  {/* Text Info */}
-                  <div className="flex-grow ml-4 flex flex-col cursor-pointer mb-1">
-                    <div className="flex flex-col">
-                      <div className="w-full flex justify-between">
-                        <p className="font-semibold text-xs sm:text-sm text-black">
-                          Founder & CEO - Munene.Dev
-                        </p>
-                        <p className="text-xs sm:text-sm text-gray-600 whitespace-nowrap">
-                          Aug 2024 - Present
-                        </p>
-                      </div>
-                    </div>
-
-                    <p className="mt-2 text-base sm:text-lg ">
-                      Munene.Dev is a full-cycle, freelance development platform
-                      engineered to architect and deploy modern, responsive web
-                      applications tailored to specific client needs. From
-                      requirements parsing and feature mapping to live
-                      production deployment, the system handles the entire
-                      development pipeline with precision and agility. Powered
-                      by the MERN Stack core (MongoDB, Express.js, React.js,
-                      Node.js), Munene.Dev delivers scalable, efficient web
-                      solutions enhanced with high-performance UI/UX rendering
-                      and seamless interactivity protocols. Whether you’re
-                      launching a startup module or optimizing a legacy system,
-                      Munene.Dev adapts, integrates, and evolves—on demand.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col md:flex-row items-center gap-5 lg:gap-10">
-                <div className="mb-10">
-                  <div className="flex flex-col gap-4">
-                    <div className="flex select-none">
-                      {/* Company Logo */}
-                      <div className="flex-none">
-                        <img
-                          className="w-12 h-12 rounded-full border-2 border-gray-300"
-                          src="/usalama.jpg"
-                          alt="Usalama Logo"
-                        />
-                      </div>
-
-                      {/* Text Info */}
-                      <div className="flex-grow ml-4 flex flex-col cursor-pointer">
-                        <div className="flex flex-col">
-                          <div className="w-full flex justify-between">
-                            <p className="font-semibold text-xs sm:text-sm text-black">
-                              Junior Software Developer Intern
-                            </p>
-                            <p className="text-xs sm:text-sm text-gray-600 whitespace-nowrap">
-                              Feb 2024 - Aug 2024
-                            </p>
-                          </div>
-                        </div>
-
-                        <p className="mt-2 text-base sm:text-lg ">
-                          I led to the design, development, and testing of
-                          web-based applications by writing clean, efficient,
-                          and maintainable code. I collaborated with senior
-                          developers to troubleshoot issues, implement new
-                          features, and enhance existing systems using modern
-                          development tools and frameworks. I also participated
-                          in code reviews, team meetings, and agile workflows,
-                          gaining hands-on experience in full-stack development.
-                          Additionally, I supported documentation efforts and
-                          assisted in optimizing application performance to
-                          improve user experience.
-                        </p>
-                      </div>
+                      <p className="mt-3 text-slate-300 leading-relaxed">
+                        {experience.description}
+                      </p>
                     </div>
                   </div>
-                </div>
-              </div>
+                </article>
+              ))}
             </div>
           </div>
-        </RevealOnScroll>
-      </section>
-    </>
+        </div>
+      </RevealOnScroll>
+    </section>
   );
 };
 
