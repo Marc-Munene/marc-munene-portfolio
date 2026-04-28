@@ -2,93 +2,95 @@ import { IoIosContact } from "react-icons/io";
 import BlurText from "../BlurText/BlurText";
 import TrueFocus from "../TrueFocus/TrueFocus";
 import { RevealOnScroll } from "./RevealOnScroll";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <>
-      <section
-        id="hero"
-        className="relative min-h-screen md:py-8 flex items-center justify-center"
+    <section id="hero" className="relative min-h-screen py-16 md:py-24 flex items-center justify-center">
+      <div
+        className="absolute inset-0 z-0"
         style={{
-          backgroundImage: "url('/munene-bg.jpg')",
+          backgroundImage:
+            "linear-gradient(to bottom, rgba(2, 6, 23, 0.78), rgba(2, 6, 23, 0.9)), url('/munene-bg.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-      >
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/80 via-black/50 to-black/80 backdrop-blur-sm"></div>
-
-        {/* Main Content */}
-        <RevealOnScroll>
-          <div className="relative z-10 mx-auto max-w-6xl py-8 px-4 sm:px-6">
-            <div className="flex flex-col md:flex-row items-center gap-6 lg:gap-8 xl:gap-10">
-              {/* Image */}
-              <div className="w-full md:w-5/12 lg:w-8/12 xl:w-4/12 flex-shrink-0">
+      />
+      <RevealOnScroll>
+        <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="glass-panel rounded-3xl p-6 md:p-10">
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="w-full md:w-5/12 xl:w-4/12 flex-shrink-0"
+              >
                 <img
                   src="/marc-logo.jpg"
                   alt="Marc's logo"
-                  className="rounded-lg shadow-xl w-full max-w-[280px] sm:max-w-[320px] md:max-w-[360px] lg:max-w-[400px] h-auto object-cover mx-auto md:mx-0"
+                  className="rounded-2xl shadow-2xl w-full max-w-[340px] h-auto object-cover mx-auto border border-slate-600/50"
                   loading="eager"
                 />
-              </div>
+              </motion.div>
 
-              {/* Text Content */}
-              <div className="w-full md:w-7/12 lg:w-7/12 xl:w-8/12 text-center md:text-left text-white">
-                <p className="text-lg flex items-center justify-center sm:text-lg md:text-lg lg:text-xl xl:text-2xl mb-2 md:mb-3">
+              <div className="w-full md:w-7/12 xl:w-8/12 text-center md:text-left text-white">
+                <p className="text-lg md:text-xl mb-2 flex items-center justify-center md:justify-start">
                   Hey, I'm
                   <TrueFocus
                     sentence=" Marc Munene"
                     manualMode={false}
                     blurAmount={5}
-                    borderColor="green"
+                    borderColor="#22d3ee"
                     animationDuration={1}
                     pauseBetweenAnimations={1}
                   />
                 </p>
 
-                <div className="text-3xl sm:text-4xl font-mono font-semibold leading-tight flex flex-wrap items-center justify-center md:justify-start gap-2 drop-shadow-lg">
+                <div className="text-4xl sm:text-5xl font-mono font-semibold leading-tight flex flex-wrap items-center justify-center md:justify-start gap-2 drop-shadow-lg">
                   <BlurText
                     text="{Full Stack}"
-                    delay={150}
+                    delay={120}
                     animateBy="words"
                     direction="top"
-                    className="text-green-400"
+                    className="text-cyan-300"
                   />
                   <BlurText
                     text="Software Developer."
-                    delay={150}
+                    delay={120}
                     animateBy="words"
                     direction="top"
-                    className="block sm:inline"
+                    className="text-slate-100"
                   />
                 </div>
 
-                <p className="mt-3 sm:mt-4 md:mt-4 text-base sm:text-lg md:text-lg lg:text-xl xl:text-2xl leading-relaxed text-white drop-shadow-md">
-                  Passionate about crafting high-performance, scalable web
-                  applications with cutting-edge technologies. Expertise in the
-                  MERN Stack (MongoDB, Express.js, React, Node.js), complemented
-                  by proficiency in Angular, TypeScript, SQL databases and
-                  Next.js. Dedicated to building seamless, user-centric
-                  solutions with clean, maintainable code and modern development
-                  practices.
+                <p className="mt-5 text-base sm:text-lg md:text-xl leading-relaxed text-slate-200 max-w-2xl">
+                  I build high-performance, scalable web applications with a
+                  sharp focus on user experience. I specialize in the MERN stack
+                  and also work confidently with Angular, TypeScript, SQL, and
+                  Next.js to deliver clean, maintainable products.
                 </p>
 
-                <div className="mt-5 sm:mt-6 md:mt-6">
+                <div className="mt-7 flex items-center justify-center md:justify-start gap-4">
                   <a
                     href="#contact"
-                    className="inline-block border bg-white text-black hover:bg-gray-200 px-4 py-2 sm:px-5 sm:py-2.5 md:px-5 md:py-2.5 text-sm sm:text-base md:text-base rounded-lg transition-all duration-300 hover:shadow-md transform hover:-translate-y-0.5 hover:scale-[1.02]"
+                    className="inline-flex items-center gap-2 rounded-xl bg-cyan-400 text-slate-950 px-5 py-3 font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-cyan-400/30"
                   >
-                    <span className="flex items-center gap-3">
-                      <IoIosContact size={24} /> Get in Touch
-                    </span>
+                    <IoIosContact size={22} /> Get in Touch
+                  </a>
+                  <a
+                    href="#projects"
+                    className="inline-flex items-center rounded-xl border border-slate-500/80 px-5 py-3 text-slate-100 transition-all duration-300 hover:border-cyan-300 hover:text-cyan-200"
+                  >
+                    See Projects
                   </a>
                 </div>
               </div>
             </div>
           </div>
-        </RevealOnScroll>
-      </section>
-    </>
+        </div>
+      </RevealOnScroll>
+    </section>
   );
 };
 
