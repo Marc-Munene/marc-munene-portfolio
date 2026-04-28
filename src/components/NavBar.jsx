@@ -2,94 +2,71 @@ import { FaGithub } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
 import { HashLink } from "react-router-hash-link";
 import { useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const NavBar = () => {
   const location = useLocation();
-
-  // Helper function to check active hash link
   const isActive = (hash) => location.hash === hash;
+  const navItems = [
+    { to: "#about", label: "About" },
+    { to: "#work-experience", label: "Experience" },
+    { to: "#projects", label: "Projects" },
+  ];
 
   return (
-    <header className="sticky top-0 z-50 mx-auto max-w-6xl ">
-      <nav className="py-2 md:py-4 flex flex-row items-center shadow-lg justify-between mx-4 sm:mx-6 lg:mx-8 xl:mx-auto max-w-6xl rounded-4xl backdrop-blur-3xl px-2 sm:px-4 bg-gray-100 ">
-        {/* logo */}
+    <header className="sticky top-0 z-50 mx-auto max-w-6xl pt-4">
+      <nav className="glass-panel flex items-center justify-between mx-4 sm:mx-6 lg:mx-8 xl:mx-auto max-w-6xl rounded-full px-3 py-3">
         <div className="flex-shrink-0">
           <a href="/">
             <img
               src="/marc.png"
               alt="logo"
-              className="h-10 w-auto ml-3 md:h-13 g:h-20 rounded"
+              className="h-10 w-auto ml-3 rounded-md"
             />
           </a>
         </div>
 
-        {/* Navigation Links */}
         <div className="hidden md:flex flex-grow justify-center">
-          <ul className="flex items-center space-x-2 sm:space-x-4 lg:space-x-6 xl:space-x-8">
-            <li>
-              <HashLink
-                to="#about"
-                className={`flex items-center justify-around py-1 md:py-2 lg:py-3 px-2 sm:px-3 md:px-4 rounded-3xl transition-all duration-300 ease-in-out text-xs sm:text-sm md:text-base lg:text-xl 
-                  ${
-                    isActive("#about")
-                      ? "bg-blue-100 text-blue-700 scale-[1.08] shadow-2xl"
-                      : "hover:backdrop-blur-lg hover:rounded-4xl hover:shadow-2xl hover:bg-blue-100 hover:px-2 sm:hover:px-3 transform transform-fill hover:scale-[1.06]"
+          <ul className="flex items-center space-x-2">
+            {navItems.map((item) => (
+              <li key={item.to}>
+                <HashLink
+                  smooth
+                  to={item.to}
+                  className={`px-4 py-2 rounded-full text-sm transition-all duration-300 ${
+                    isActive(item.to)
+                      ? "bg-cyan-400/20 text-cyan-300 shadow-lg"
+                      : "text-slate-200 hover:bg-white/10 hover:text-white"
                   }`}
-              >
-                <span className="flex items-center gap-1 sm:gap-2">
-                  <span>About</span>
-                </span>
-              </HashLink>
-            </li>
-            <li>
-              <HashLink
-                to="#work-experience"
-                className={`flex items-center justify-around py-1 md:py-2 lg:py-3 px-2 sm:px-3 md:px-4 rounded-3xl transition-all duration-300 ease-in-out text-xs sm:text-sm md:text-base lg:text-xl 
-                  ${
-                    isActive("#work-experience")
-                      ? "bg-blue-100 text-blue-700 scale-[1.08] shadow-2xl"
-                      : "hover:backdrop-blur-lg hover:rounded-4xl hover:shadow-2xl hover:bg-blue-100 hover:px-2 sm:hover:px-3 transform transform-fill hover:scale-[1.06]"
-                  }`}
-              >
-                <span className="flex items-center gap-1 sm:gap-2">
-                  <span>Experience</span>
-                </span>
-              </HashLink>
-            </li>
-            <li>
-              <HashLink
-                to="#projects"
-                className={`flex items-center justify-around py-1 md:py-2 lg:py-3 px-2 sm:px-3 md:px-4 rounded-3xl transition-all duration-300 ease-in-out text-xs sm:text-sm md:text-base lg:text-xl 
-                  ${
-                    isActive("#projects")
-                      ? "bg-blue-100 text-blue-700 scale-[1.08] shadow-2xl"
-                      : "hover:backdrop-blur-lg hover:rounded-4xl hover:shadow-2xl hover:bg-blue-100 hover:px-2 sm:hover:px-3 transform transform-fill hover:scale-[1.06]"
-                  }`}
-              >
-                <span className="flex items-center gap-1 sm:gap-2">
-                  <span>Projects</span>
-                </span>
-              </HashLink>
-            </li>
+                >
+                  {item.label}
+                </HashLink>
+              </li>
+            ))}
           </ul>
         </div>
 
-        {/* Icons */}
-        <div className="flex space-x-3 lg:space-x-4 mr-3 social-icons">
-          <a
+        <div className="flex space-x-3 lg:space-x-4 mr-3">
+          <motion.a
+            whileHover={{ y: -2, scale: 1.08 }}
+            whileTap={{ scale: 0.95 }}
             href="https://github.com/Marc-Munene"
             target="_blank"
             rel="noopener noreferrer"
+            className="text-slate-200 hover:text-white"
           >
-            <FaGithub className="cursor-pointer h-5 w-5 sm:h-6 sm:w-6" />
-          </a>
-          <a
+            <FaGithub className="h-5 w-5 sm:h-6 sm:w-6" />
+          </motion.a>
+          <motion.a
+            whileHover={{ y: -2, scale: 1.08 }}
+            whileTap={{ scale: 0.95 }}
             href="https://www.instagram.com/its__munene/"
             target="_blank"
             rel="noopener noreferrer"
+            className="text-slate-200 hover:text-pink-300"
           >
-            <BsInstagram className="cursor-pointer h-5 w-5 sm:h-6 sm:w-6" />
-          </a>
+            <BsInstagram className="h-5 w-5 sm:h-6 sm:w-6" />
+          </motion.a>
         </div>
       </nav>
     </header>
