@@ -5,7 +5,7 @@ const experiences = [
     company: "Innovex",
     logo: "/innovex-logo.jpg",
     role: "Full Stack Software Developer",
-    period: "Sep 2024 - Present",
+    // period: "Sep 2024 - Present",
     description:
       "Led end-to-end redevelopment of a nationwide enterprise sales portal for Sanlam Allianz Kenya using Angular, TypeScript, FastAPI, Docker, and Azure CI/CD, focusing on scale, security, and production reliability.",
   },
@@ -13,7 +13,7 @@ const experiences = [
     company: "Munene.Dev",
     logo: "/marc-logo.jpg",
     role: "Founder & CEO",
-    period: "Aug 2024 - Present",
+    // period: "Aug 2024 - Present",
     description:
       "Built and run a full-cycle freelance development platform delivering modern web applications from requirement mapping to production deployment, powered by scalable MERN-based architecture.",
   },
@@ -21,7 +21,7 @@ const experiences = [
     company: "Usalama",
     logo: "/usalama.jpg",
     role: "Junior Software Developer Intern",
-    period: "Feb 2024 - Aug 2024",
+    // period: "Feb 2024 - Aug 2024",
     description:
       "Contributed to building and testing web applications, implemented new features with senior engineers, and improved performance through practical full-stack and agile collaboration experience.",
   },

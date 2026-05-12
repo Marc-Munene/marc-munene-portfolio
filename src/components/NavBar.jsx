@@ -16,12 +16,12 @@ const NavBar = () => {
   return (
     <header className="sticky top-0 z-50 mx-auto max-w-6xl pt-4">
       <nav className="glass-panel flex items-center justify-between mx-4 sm:mx-6 lg:mx-8 xl:mx-auto max-w-6xl rounded-full px-3 py-3">
-        <div className="flex-shrink-0">
+        <div className="flex-shrink-0 ">
           <a href="/">
             <img
               src="/marc.png"
               alt="logo"
-              className="h-10 w-auto ml-3 rounded-md"
+              className="h-10 w-auto ml-3 rounded-md bg-white"
             />
           </a>
         </div>
