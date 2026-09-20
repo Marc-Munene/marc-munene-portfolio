@@ -1,10 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="marc-logo.jpg" />
+    <link rel="icon" type="image/jpeg" href="/marc.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Munene.Dev </></title>
+    <meta
+      name="description"
+      content="Marc Munene — full-stack developer in Nairobi. Production web systems with React, Angular, FastAPI, and Node."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <title>Marc Munene — Full-stack developer</title>
+    <script>
+      try {
+        var theme = localStorage.getItem("theme");
+        if (theme === "light" || theme === "dark") {
+          document.documentElement.dataset.theme = theme;
+        }
+      } catch (e) {}
+    </script>
   </head>
   <body>
     <div id="root"></div>

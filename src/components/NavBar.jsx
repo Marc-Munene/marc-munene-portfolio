@@ -1,76 +1,85 @@
-import { FaGithub } from "react-icons/fa";
-import { BsInstagram } from "react-icons/bs";
-import { HashLink } from "react-router-hash-link";
-import { useLocation } from "react-router-dom";
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { useTheme } from "../theme";
 
-const NavBar = () => {
+const links = [
+  { to: "/#work", label: "Work", hash: "work" },
+  { to: "/#about", label: "About", hash: "about" },
+  { to: "/#experience", label: "Experience", hash: "experience" },
+  { to: "/#contact", label: "Contact", hash: "contact" },
+];
+
+export function NavBar() {
+  const { theme, toggleTheme } = useTheme();
+  const [open, setOpen] = useState(false);
   const location = useLocation();
-  const isActive = (hash) => location.hash === hash;
-  const navItems = [
-    { to: "#about", label: "About" },
-    { to: "#work-experience", label: "Experience" },
-    { to: "#projects", label: "Projects" },
-  ];
+
+  const isHashActive = (hash) =>
+    location.pathname === "/" && location.hash === `#${hash}`;
 
   return (
-    <header className="sticky top-0 z-50 mx-auto max-w-6xl pt-4">
-      <nav className="glass-panel flex items-center justify-between mx-4 sm:mx-6 lg:mx-8 xl:mx-auto max-w-6xl rounded-full px-3 py-3">
-        <div className="flex-shrink-0 ">
-          <a href="/">
-            <img
-              src="/marc.png"
-              alt="logo"
-              className="h-10 w-auto ml-3 rounded-md bg-white"
-            />
-          </a>
-        </div>
+    <header className="sticky top-0 z-50 border-b border-line bg-bg/90 backdrop-blur-sm">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4 md:px-8">
+        <Link to="/" className="font-serif text-xl tracking-tight text-fg">
+          MM
+        </Link>
 
-        <div className="hidden md:flex flex-grow justify-center">
-          <ul className="flex items-center space-x-2">
-            {navItems.map((item) => (
-              <li key={item.to}>
-                <HashLink
-                  smooth
-                  to={item.to}
-                  className={`px-4 py-2 rounded-full text-sm transition-all duration-300 ${
-                    isActive(item.to)
-                      ? "bg-cyan-400/20 text-cyan-300 shadow-lg"
-                      : "text-slate-200 hover:bg-white/10 hover:text-white"
-                  }`}
+        <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
+          {links.map((item) => (
+            <a
+              key={item.hash}
+              href={item.to}
+              className={`text-sm transition-colors hover:text-accent ${
+                isHashActive(item.hash) ? "text-accent" : "text-soft"
+              }`}
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
+
+        <div className="flex items-center gap-3">
+          <button
+            type="button"
+            onClick={toggleTheme}
+            className="border border-line px-3 py-1.5 text-xs uppercase tracking-[0.16em] text-soft transition-colors hover:border-accent hover:text-accent"
+            aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+          >
+            {theme === "dark" ? "Light" : "Dark"}
+          </button>
+          <button
+            type="button"
+            className="border border-line px-3 py-1.5 text-xs uppercase tracking-[0.16em] text-fg md:hidden"
+            aria-expanded={open}
+            aria-controls="mobile-nav"
+            onClick={() => setOpen((value) => !value)}
+          >
+            {open ? "Close" : "Menu"}
+          </button>
+        </div>
+      </div>
+
+      {open ? (
+        <nav
+          id="mobile-nav"
+          className="border-t border-line px-5 py-4 md:hidden"
+          aria-label="Mobile"
+        >
+          <ul className="flex flex-col gap-4">
+            {links.map((item) => (
+              <li key={item.hash}>
+                <a
+                  href={item.to}
+                  className="text-lg text-fg"
+                  onClick={() => setOpen(false)}
                 >
                   {item.label}
-                </HashLink>
+                </a>
               </li>
             ))}
           </ul>
-        </div>
-
-        <div className="flex space-x-3 lg:space-x-4 mr-3">
-          <motion.a
-            whileHover={{ y: -2, scale: 1.08 }}
-            whileTap={{ scale: 0.95 }}
-            href="https://github.com/Marc-Munene"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-slate-200 hover:text-white"
-          >
-            <FaGithub className="h-5 w-5 sm:h-6 sm:w-6" />
-          </motion.a>
-          <motion.a
-            whileHover={{ y: -2, scale: 1.08 }}
-            whileTap={{ scale: 0.95 }}
-            href="https://www.instagram.com/its__munene/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-slate-200 hover:text-pink-300"
-          >
-            <BsInstagram className="h-5 w-5 sm:h-6 sm:w-6" />
-          </motion.a>
-        </div>
-      </nav>
+        </nav>
+      ) : null}
     </header>
   );
-};
-
-export { NavBar };
+}

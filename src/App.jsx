@@ -1,37 +1,53 @@
+import { useEffect } from "react";
+import { AnimatePresence, motion as Motion, useReducedMotion } from "framer-motion";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { NavBar } from "./components/NavBar";
-import { Footer } from "./components/Sections/Footer";
-import { Hero } from "./components/Sections/Hero";
-import { About } from "./components/Sections/About";
-import { WorkExperience } from "./components/Sections/WorkExperience";
-import { Projects } from "./components/Sections/projects";
+import { Footer } from "./components/Footer";
 import { ScrollToTop } from "./components/ScrollToTop";
-import { motion } from "framer-motion";
+import { Home } from "./pages/Home";
+import { CaseStudy } from "./pages/CaseStudy";
+import { pageProps } from "./motion";
 
-const App = () => {
+export function App() {
+  const location = useLocation();
+  const reduced = useReducedMotion();
+
+  useEffect(() => {
+    if (location.hash) {
+      const node = document.getElementById(location.hash.slice(1));
+      if (node) {
+        node.scrollIntoView({ behavior: reduced ? "auto" : "smooth" });
+        return;
+      }
+    }
+    if (location.pathname !== "/") {
+      window.scrollTo({ top: 0, behavior: reduced ? "auto" : "smooth" });
+    }
+  }, [location.pathname, location.hash, reduced]);
+
   return (
-    <div className="min-h-screen relative overflow-hidden">
-      <div className="pointer-events-none absolute inset-0 animated-grid opacity-20"></div>
-      <motion.div
-        className="pointer-events-none absolute -top-24 -left-10 h-80 w-80 rounded-full bg-cyan-500/20 blur-3xl"
-        animate={{ x: [0, 30, 0], y: [0, 20, 0] }}
-        transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="pointer-events-none absolute top-1/3 -right-20 h-96 w-96 rounded-full bg-blue-600/20 blur-3xl"
-        animate={{ x: [0, -35, 0], y: [0, 18, 0] }}
-        transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <div className="relative z-10">
-        <NavBar />
-        <Hero />
-        <About />
-        <WorkExperience />
-        <Projects />
-        <ScrollToTop />
-        <Footer />
-      </div>
+    <div className="min-h-screen bg-bg text-fg">
+      <a href="#main" className="skip-link">
+        Skip to content
+      </a>
+      <NavBar />
+      <main id="main">
+        <AnimatePresence mode="wait">
+          <Routes location={location} key={location.pathname}>
+            <Route
+              path="/"
+              element={
+                <Motion.div {...pageProps(reduced)}>
+                  <Home />
+                </Motion.div>
+              }
+            />
+            <Route path="/work/:slug" element={<CaseStudy />} />
+          </Routes>
+        </AnimatePresence>
+      </main>
+      <ScrollToTop />
+      <Footer />
     </div>
   );
-};
-
-export { App };
+}

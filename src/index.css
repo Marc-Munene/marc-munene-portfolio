@@ -1,31 +1,90 @@
 @import "tailwindcss";
 
-:root {
+:root,
+[data-theme="dark"] {
+  --bg: #0b0b0a;
+  --fg: #edeae4;
+  --muted: #a39e94;
+  --line: #2a2926;
+  --fg-soft: #c8c3b8;
   color-scheme: dark;
+}
+
+[data-theme="light"] {
+  --bg: #edeae4;
+  --fg: #0b0b0a;
+  --muted: #5c5850;
+  --line: #d4cfc4;
+  --fg-soft: #3a3834;
+  color-scheme: light;
+}
+
+@theme inline {
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Instrument Serif", ui-serif, Georgia, serif;
+  --color-bg: var(--bg);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: #c45c26;
+  --color-soft: var(--fg-soft);
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 body {
-  background: radial-gradient(circle at top left, #0f172a 0%, #020617 46%, #000000 100%);
-  color: #e2e8f0;
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.6;
 }
 
 ::selection {
-  background: rgba(34, 211, 238, 0.28);
-  color: #f8fafc;
+  background: color-mix(in srgb, #c45c26 45%, transparent);
+  color: var(--fg);
 }
 
-.glass-panel {
-  background: rgba(15, 23, 42, 0.58);
-  border: 1px solid rgba(148, 163, 184, 0.28);
-  backdrop-filter: blur(14px);
+:focus-visible {
+  outline: 2px solid #c45c26;
+  outline-offset: 3px;
 }
 
-.animated-grid {
-  background-image: linear-gradient(rgba(148, 163, 184, 0.12) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(148, 163, 184, 0.12) 1px, transparent 1px);
-  background-size: 48px 48px;
+a {
+  text-underline-offset: 0.18em;
+}
+
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 80;
+  background: var(--fg);
+  color: var(--bg);
+  padding: 0.5rem 0.75rem;
+}
+
+.skip-link:focus {
+  top: 1rem;
 }
