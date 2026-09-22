@@ -81,21 +81,57 @@ export function Hero() {
           </Motion.p>
         </div>
 
-        <Motion.div
-          initial={{ opacity: 0, y: reduced ? 0 : 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.85, delay: reduced ? 0 : 0.35 }}
-          className="relative md:col-span-5 lg:col-span-4 md:mt-24"
-        >
-          <img
-            src="/about-munene.jpg"
-            alt="Marc Munene, full-stack developer based in Nairobi"
-            className="aspect-[4/5] w-full object-cover"
-            width="640"
-            height="800"
-          />
-        </Motion.div>
+        <div className="relative md:col-span-5 lg:col-span-4 md:mt-24">
+          <FramedPortrait reduced={reduced} />
+        </div>
       </div>
     </section>
+  );
+}
+
+function FramedPortrait({ reduced }) {
+  return (
+    <Motion.div
+      initial={{ opacity: 0, y: reduced ? 0 : 24 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.85, delay: reduced ? 0 : 0.35 }}
+      className="relative"
+    >
+      <div className="relative">
+        <img
+          src="/about-munene.jpg"
+          alt="Marc Munene, full-stack developer based in Nairobi"
+          className="aspect-[4/5] w-full object-cover"
+          width="640"
+          height="800"
+        />
+
+        {/* corner brackets — devtools element-inspector treatment */}
+        <Motion.span
+          initial={{ opacity: 0, scale: reduced ? 1 : 0.85 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: reduced ? 0 : 0.75 }}
+          className="pointer-events-none absolute -left-2 -top-2 h-5 w-5 border-l-2 border-t-2 border-accent"
+        />
+        <Motion.span
+          initial={{ opacity: 0, scale: reduced ? 1 : 0.85 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: reduced ? 0 : 0.8 }}
+          className="pointer-events-none absolute -right-2 -top-2 h-5 w-5 border-r-2 border-t-2 border-accent"
+        />
+        <Motion.span
+          initial={{ opacity: 0, scale: reduced ? 1 : 0.85 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: reduced ? 0 : 0.85 }}
+          className="pointer-events-none absolute -bottom-2 -left-2 h-5 w-5 border-b-2 border-l-2 border-accent"
+        />
+        <Motion.span
+          initial={{ opacity: 0, scale: reduced ? 1 : 0.85 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: reduced ? 0 : 0.9 }}
+          className="pointer-events-none absolute -bottom-2 -right-2 h-5 w-5 border-b-2 border-r-2 border-accent"
+        />
+      </div>
+    </Motion.div>
   );
 }
