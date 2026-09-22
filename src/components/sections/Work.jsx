@@ -4,6 +4,7 @@ import { motion as Motion, useReducedMotion } from "framer-motion";
 import { projectData, projectFilters } from "../../data/projects";
 import { RevealOnScroll } from "../RevealOnScroll";
 import { SectionHeading } from "../SectionHeading";
+import { FaGithub } from "react-icons/fa6";
 
 export function Work() {
   const [filter, setFilter] = useState("All");
@@ -18,9 +19,13 @@ export function Work() {
       <div className="mx-auto max-w-6xl px-5 md:px-8">
         <RevealOnScroll>
           <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
-            <SectionHeading index="03" label="Selected work" title="Things I shipped" />
+            <SectionHeading
+              index="03"
+              label="Selected work"
+              title="Things I shipped"
+            />
             <div
-              className="mb-10 flex flex-wrap gap-2 md:mb-14"
+              className="mb-10 flex flex-wrap gap-x-6 gap-y-2 md:mb-14"
               role="group"
               aria-label="Filter projects"
             >
@@ -32,10 +37,10 @@ export function Work() {
                     type="button"
                     aria-pressed={active}
                     onClick={() => setFilter(item)}
-                    className={`border px-3 py-1.5 text-xs uppercase tracking-[0.14em] transition-colors ${
+                    className={`border-b pb-1 text-sm transition-colors ${
                       active
                         ? "border-accent text-accent"
-                        : "border-line text-muted hover:border-fg hover:text-fg"
+                        : "border-transparent text-muted hover:border-line hover:text-fg"
                     }`}
                   >
                     {item}
@@ -46,7 +51,7 @@ export function Work() {
           </div>
         </RevealOnScroll>
 
-        <ul className="border-t border-line">
+        <ol className="border-t border-line">
           {visible.map((project, index) => {
             const imageLeft = index % 2 === 0;
             return (
@@ -75,21 +80,27 @@ export function Work() {
                         imageLeft ? "md:order-2" : "md:order-1"
                       }`}
                     >
-                      <p className="text-xs uppercase tracking-[0.18em] text-muted">
-                        {project.tags.join(" · ")} · {project.year}
+                      <p className="font-serif text-sm italic text-muted">
+                        {String(index + 1).padStart(2, "0")}
                       </p>
                       <h3 className="mt-3 font-serif text-3xl text-fg transition-colors group-hover:text-accent md:text-4xl">
                         {project.title}
                       </h3>
+                      <div className="mt-4 flex items-baseline justify-between gap-4">
+                        <p className="text-sm text-muted">
+                          {project.tags.join(", ")}
+                        </p>
+                        <p className="text-sm text-muted">{project.year}</p>
+                      </div>
                       <p className="mt-4 text-soft">{project.summary}</p>
-                      <p className="mt-6 text-sm text-accent">Read the case →</p>
+                      <p className="mt-6 text-sm text-accent">Read the case</p>
                     </div>
                   </Link>
                 </RevealOnScroll>
               </li>
             );
           })}
-        </ul>
+        </ol>
 
         {visible.length === 0 ? (
           <p className="py-12 text-muted">Nothing in this filter yet.</p>
@@ -103,7 +114,7 @@ export function Work() {
             rel="noopener noreferrer"
             className="text-fg underline decoration-line hover:text-accent hover:decoration-accent"
           >
-            GitHub
+            <FaGithub className="mr-1 ml-1 inline-block text-2xl" /> GitHub
           </a>
           .
         </p>

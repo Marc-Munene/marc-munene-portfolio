@@ -12,7 +12,7 @@ export const projectData = [
       "The nationwide hub Sanlam Allianz Kenya agents and branches use for new business, renewals, and vehicle valuations.",
     lead: "I rebuilt the sales portal agents actually work in — not a brochure site, the production system behind insurance operations across the country.",
     what: "A central sales portal for agents and branches: new business, policy renewals, and vehicle valuations in one place, instead of a pile of disconnected tools.",
-    did: "Led the rebuild end to end on Angular, TypeScript, FastAPI, Docker, and Azure CI/CD. The brief was scale, security, and something that stays up in production — not a demo.",
+    did: "Led the rebuild end to end on Angular, TypeScript, FastAPI, Docker, and Azure CI/CD. The brief was scale, security, and something that stays up in production.",
     outcome:
       "Live at gisales.ke.sanlamallianz.com. It's the system agents and branches use day to day.",
   },
@@ -30,7 +30,8 @@ export const projectData = [
     lead: "Campus rooms get claimed by whoever shows up first. I built a live view of vacant classrooms and a booking flow that stops two classes landing in the same space.",
     what: "A web app for students and class representatives to see which rooms are free and lock one in, in real time.",
     did: "Designed and shipped the full product: availability, booking, and the rules that keep two groups from grabbing the same room.",
-    outcome: "A working booking flow on the web — less corridor hunting, fewer clashes.",
+    outcome:
+      "A working booking flow on the web — less corridor hunting, fewer clashes.",
   },
   {
     slug: "chama",
